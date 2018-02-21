@@ -32,8 +32,58 @@ function formatHtmlFromPatientList(_patients) {
 
 var GetAllPatientsData = function() {
     
-    
-    
+      var _patients = [
+            {
+                "fullname": "roni benizri"
+                , "image_path" : "http://placehold.it/100x100"
+                , "gender" : "male"
+                , "age" : "34"
+                , "address" : "..."
+                , "country" : "england"
+                , "history" : "a long text of history"
+                , "progress" : {
+                // a lot of data about previous programs and accomplishments
+                }   
+            } ,
+            {
+                "fullname": "roni benizri"
+                , "image_path" : "http://placehold.it/100x100"
+                , "gender" : "male"
+                , "age" : "34"
+                , "address" : "..."
+                , "country" : "england"
+                , "history" : "a long text of history"
+                , "progress" : {
+                // a lot of data about previous programs and accomplishments
+                }   
+            } ,{
+                "fullname": "roni benizri"
+                , "image_path" : "http://placehold.it/100x100"
+                , "gender" : "male"
+                , "age" : "34"
+                , "address" : "..."
+                , "country" : "england"
+                , "history" : "a long text of history"
+                , "progress" : {
+                // a lot of data about previous programs and accomplishments
+                }   
+            } ,{
+                "fullname": "roni benizri"
+                , "image_path" : "http://placehold.it/100x100"
+                , "gender" : "male"
+                , "age" : "34"
+                , "address" : "..."
+                , "country" : "england"
+                , "history" : "a long text of history"
+                , "progress" : {
+                // a lot of data about previous programs and accomplishments
+                }   
+            } 
+            ];
+        
+            formatHtmlFromPatientList(_patients);
+
+    /*
     
     const serverRespone = {};
 
@@ -43,13 +93,10 @@ var GetAllPatientsData = function() {
         } else {
             var _patients = data;
 
-            if (_patients.length == 0){
-                _patients = 
-            }
             formatHtmlFromPatientList(_patients);
         }
     });
-
+*/
 };
 
 GetAllPatientsData();
