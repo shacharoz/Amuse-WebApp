@@ -21,7 +21,7 @@ var GetAllPatientsData = function() {
         }
         ,
         {
-            "fullname": "roni benizri",
+            "fullname": "zvia elgali",
             "image_path": "http://placehold.it/100x100",
             "gender": "male",
             "age": "34",
@@ -83,15 +83,14 @@ var GenerateItems_Patients = function() {
     for (var i = 0; i < _patients.length; i++) {
         var currentItemData = _patients[i];
 
-        if (TemplateType == "ImagePullLeft") {
-            //template for image based item 
-            currentItemHtmlTemplate = "<a class='list-group-item list-group-item-action' href='" + currentItemData.link + "'>";
-            currentItemHtmlTemplate += "<div class='media'> ";
-            currentItemHtmlTemplate += "<img class='d-flex mr-3 rounded-circle' src=" + currentItemData.image_path +" alt=''>";
-            currentItemHtmlTemplate += "<div class='media-body'>";
-            currentItemHtmlTemplate += "<strong>" + currentItemData.fullname + "</strong>";
-            currentItemHtmlTemplate += "</div></div></a>";
-        }
+        //template for image based item 
+        currentItemHtmlTemplate = "<a class='list-group-item list-group-item-action' href='" + currentItemData.link + "'>";
+        currentItemHtmlTemplate += "<div class='media'> ";
+        currentItemHtmlTemplate += "<img class='d-flex mr-3 rounded-circle' src=" + currentItemData.image_path +" alt=''>";
+        currentItemHtmlTemplate += "<div class='media-body'>";
+        currentItemHtmlTemplate += "<strong>" + currentItemData.fullname + "</strong>";
+        currentItemHtmlTemplate += "</div></div></a>";
+        
 
         allItemsInHtml += currentItemHtmlTemplate;
     }
