@@ -21,7 +21,7 @@ var GetAllPatientsData = function() {
         }
         ,
         {
-            "fullname": "zvia elgali",
+            "fullname": "roni benizri",
             "image_path": "http://placehold.it/100x100",
             "gender": "male",
             "age": "34",
@@ -72,35 +72,31 @@ var GenerateItems_Patients = function() {
 
     //$("#resultHtmlText").html("will be replaced with something");
 
-    var allItemsInHtml = "<div class='row'>";
+    var allItemsInHtml = "";
 
    
 
     //generate items
     var currentItemHtmlTemplate = "";
-            
+
     
     for (var i = 0; i < _patients.length; i++) {
         var currentItemData = _patients[i];
 
-        //template for image based item 
-        
-        currentItemHtmlTemplate = "<div class='col-4'>";
-        currentItemHtmlTemplate += "<a class='list-group-item list-group-item-action' href='programs.html'>";
-        currentItemHtmlTemplate += "<div class='media'> ";
-        currentItemHtmlTemplate += "<img class='d-flex mr-3 rounded-circle' src=" + currentItemData.image_path +" alt=''>";
-        currentItemHtmlTemplate += "<div class='media-body'>";
-        currentItemHtmlTemplate += "<strong>" + currentItemData.fullname + "</strong>";
-        currentItemHtmlTemplate += "</div></div></a></div>";
-        
+        if (TemplateType == "ImagePullLeft") {
+            //template for image based item 
+            currentItemHtmlTemplate = "<a class='list-group-item list-group-item-action' href='" + currentItemData.link + "'>";
+            currentItemHtmlTemplate += "<div class='media'> ";
+            currentItemHtmlTemplate += "<img class='d-flex mr-3 rounded-circle' src=" + currentItemData.image_path +" alt=''>";
+            currentItemHtmlTemplate += "<div class='media-body'>";
+            currentItemHtmlTemplate += "<strong>" + currentItemData.fullname + "</strong>";
+            currentItemHtmlTemplate += "</div></div></a>";
+        }
+
         allItemsInHtml += currentItemHtmlTemplate;
     }
 
 
-    //close the row
-     allItemsInHtml += "</div>";
-    
-    
     //write html to gui
     return allItemsInHtml;
 };
