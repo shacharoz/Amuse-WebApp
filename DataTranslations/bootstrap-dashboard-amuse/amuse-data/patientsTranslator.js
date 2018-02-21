@@ -72,30 +72,35 @@ var GenerateItems_Patients = function() {
 
     //$("#resultHtmlText").html("will be replaced with something");
 
-    var allItemsInHtml = "";
+    var allItemsInHtml = "<div class='row'>";
 
    
 
     //generate items
     var currentItemHtmlTemplate = "";
-
+            
     
     for (var i = 0; i < _patients.length; i++) {
         var currentItemData = _patients[i];
 
         //template for image based item 
-        currentItemHtmlTemplate = "<a class='list-group-item list-group-item-action' href='" + currentItemData.link + "'>";
+        
+        currentItemHtmlTemplate = "<div class='col-4'>";
+        currentItemHtmlTemplate += "<a class='list-group-item list-group-item-action' href='programs.html'>";
         currentItemHtmlTemplate += "<div class='media'> ";
         currentItemHtmlTemplate += "<img class='d-flex mr-3 rounded-circle' src=" + currentItemData.image_path +" alt=''>";
         currentItemHtmlTemplate += "<div class='media-body'>";
         currentItemHtmlTemplate += "<strong>" + currentItemData.fullname + "</strong>";
-        currentItemHtmlTemplate += "</div></div></a>";
+        currentItemHtmlTemplate += "</div></div></a></div>";
         
-
         allItemsInHtml += currentItemHtmlTemplate;
     }
 
 
+    //close the row
+     allItemsInHtml += "</div>";
+    
+    
     //write html to gui
     return allItemsInHtml;
 };
