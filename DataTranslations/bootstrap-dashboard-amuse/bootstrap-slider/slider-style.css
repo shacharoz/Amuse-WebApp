@@ -1,0 +1,21 @@
+.slider-handle.custom {
+	background: transparent none;
+	/* You can customize the handle and set a background image */
+}
+
+/* Or display content like unicode characters or fontawesome icons */
+.slider-handle.custom::before {
+	line-height: 15px;
+	font-size: 50px;
+	content: '\2605'; /*'./Desi/assets/vol_button.png' ; /*unicode star character    '\2605' */
+	color: #726204;
+}
+
+
+#bootstrap_volume_slider .slider-selection  {
+	background: red;
+}
+
+#bootstrap_volume_slider .slider-track-high {
+	background: green;
+}
