@@ -39,12 +39,7 @@ var GetAllPatientsData = function() {
         } else {
             var _patients = data;
 
-            //$("#resultHtmlText").html("will be replaced with something");
             formatHtmlFromPatientList(_patients);
-
-            // //write html to gui
-            // return allItemsInHtml;
-
         }
     });
 
