@@ -31,6 +31,10 @@ function formatHtmlFromPatientList(_patients) {
 }
 
 var GetAllPatientsData = function() {
+    
+    
+    
+    
     const serverRespone = {};
 
     $.get("/patient", function (data,status) {
@@ -39,6 +43,9 @@ var GetAllPatientsData = function() {
         } else {
             var _patients = data;
 
+            if (_patients.length == 0){
+                _patients = 
+            }
             formatHtmlFromPatientList(_patients);
         }
     });
