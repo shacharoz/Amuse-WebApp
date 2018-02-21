@@ -7,7 +7,7 @@ var GetAllPatientsData = function() {
     return [
 
         {
-            "fullname": "roni benizri",
+            "fullname": "Roni Benizri",
             "image_path": "http://placehold.it/100x100",
             "gender": "male",
             "age": "34",
@@ -21,7 +21,7 @@ var GetAllPatientsData = function() {
         }
         ,
         {
-            "fullname": "zvia elgali",
+            "fullname": "Zvia Elgali",
             "image_path": "http://placehold.it/100x100",
             "gender": "male",
             "age": "34",
@@ -35,7 +35,7 @@ var GetAllPatientsData = function() {
        }
         , 
         {
-            "fullname": "roni benizri",
+            "fullname": "Moni Menizri",
             "image_path": "http://placehold.it/100x100",
             "gender": "male",
             "age": "34",
@@ -49,7 +49,7 @@ var GetAllPatientsData = function() {
        }
         ,
         {
-            "fullname": "roni benizri",
+            "fullname": "Soni Senizri",
             "image_path": "http://placehold.it/100x100",
             "gender": "male",
             "age": "34",
