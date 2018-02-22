@@ -1,0 +1,44 @@
+
+/* Patients Section */
+section#patients{
+	background-color: #F9F9F9;
+	padding: 5px 0;
+}
+
+
+div#patients-row{
+	margin: 35px 0;
+}
+
+div#three-p-row .row ,
+section#patients > .row {
+    
+ 	margin-right: 0;
+	margin-left: 0;
+    
+}
+
+a#patient-link:hover{
+	text-decoration: none;
+}
+
+div#patient-body{
+	background-color: white;
+	border: 1px solid #F2F2F2;
+	border-radius: 5px;
+}
+
+img#patient-picture{
+	width: 50%;
+	height: 50%;
+	margin: 12.5% 0;
+	padding: 0 12.5%;
+	border-radius: 100%;
+}
+
+p#patient-name{
+	margin: auto;
+	color: #333;
+	text-align: center;
+	font-size: 16px;
+}
