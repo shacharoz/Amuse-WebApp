@@ -1,0 +1,21 @@
+.bg-white {
+   background-color:  #fff !important;
+}
+
+.bg-amuse {
+    
+    background: linear-gradient(180deg, #344161 0%, #19223B 100%);
+}
+
+
+.navbar .nav-link {
+    color: rgba(255,255,255,.5);
+}
+
+.navbar-brand{
+    color: white;
+}
+
+    /*
+#mainNav .navbar-collapse .navbar-nav .nav-item .nav-link
+*/
