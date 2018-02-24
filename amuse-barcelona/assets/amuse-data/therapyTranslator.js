@@ -47,14 +47,22 @@ function formatHtmlFromTherapy(current_index) {
 
 
     document.getElementById("activity-response-holder").innerHTML = step_activity_holder_html;
-
-
-
-
-
+    
+    
+    
     //theraputic values
     values_menu();
-
+    
+    
+    
+    
+    
+    // update the play stop button 
+    if (ReadApplicationState(_program_id) == false){
+        TogglePlayStopButton(true);
+    } else {
+        TogglePlayStopButton(false);
+    }
 }
 
 
@@ -162,30 +170,46 @@ function steps_next() {
 
 //called from the html button
 function activate_program(){
-    //call function here
-  $.get("/therapy/activate?therapyId=" + program_id, function (data,status) {
-    if (status !== "success") {
-      console.log("Error while starting therapy." +  _program_id + " status:" + status);
-    } else {
-      currentProgramData = data;
-    }
-  });
+    //console.log("activate_program" );
+    
+    //replace button to stop
+    TogglePlayStopButton(false);
+    
+    //call server function here with program id and step id
+     $.get("/therapy/activate?therapyId=" + currentStepData.id, function (data,status) {
+        if (status !== "success") {
+          console.log("Error while starting therapy." + currentStepData.id + " status:" + status);
+        } else {
+          currentProgramData = data;
+        }
+     });
+    
+    //make sure all pages remember the app is playing  
+    SaveApplicationState(_program_id, true);
+    
 }
 
 //called from the html button
 function deactivate_program(){
+//console.log("deactivate_program" );
+    
+    //replace button to play
+    TogglePlayStopButton(true);
+    
+    //call server function here
+    $.get("/therapy/deactivate?therapyId=" + currentStepData.id, function (data,status) {
+        if (status !== "success") {
+          console.log("Error while stopping therapy." +  currentStepData.id + " status:" + status);
+        } else {
+          currentProgramData = data;
+        }
+    });
 
-  $.get("/therapy/deactivate?therapyId=" + program_id, function (data,status) {
-    if (status !== "success") {
-      console.log("Error while stopping therapy." +  _program_id + " status:" + status);
-    } else {
-      currentProgramData = data;
-    }
-  });
+    //make sure all pages remember the app is playing  
+    SaveApplicationState(_program_id, false);
 }
 
 var GetSpeicificStep = function(program_id, step_index) {
-
 
   const serverRespone = {};
 
@@ -197,7 +221,7 @@ var GetSpeicificStep = function(program_id, step_index) {
 
 
 
-      formatHtmlFromTherapy(step_index);
+      formatHtmlFromTherapy(currentProgramData);
     }
   });
 
@@ -259,21 +283,6 @@ var GetSpeicificStep = function(program_id, step_index) {
     //     ];
 
 
-
-
-    /*
-    const serverRespone = {};
-
-    $.get("/programs", function (data,status) {
-        if (status !== "success") {
-            console.log("Error while updating patients data from server. status:" + status);
-        } else {
-            var _programs = data;
-
-            formatHtmlFromTherapyList(_programs);
-        }
-    });
-    */
 };
 
 
