@@ -45,6 +45,18 @@ function formatHtmlFromPatientList(_patients) {
 
 var GetAllPatientsData = function() {
     
+    const serverRespone = {};
+
+    $.get("/patient", function (data,status) {
+        if (status !== "success") {
+            console.log("Error while updating patients data from server. status:" + status);
+        } else {
+            var _patients = data;
+
+            formatHtmlFromPatientList(_patients);
+        }
+    });
+    /*
       var _patients = [
             { 
                 "fullname": "roni benizri"
@@ -96,19 +108,8 @@ var GetAllPatientsData = function() {
         
             formatHtmlFromPatientList(_patients);
 
-    /*
     
-    const serverRespone = {};
-
-    $.get("/patient", function (data,status) {
-        if (status !== "success") {
-            console.log("Error while updating patients data from server. status:" + status);
-        } else {
-            var _patients = data;
-
-            formatHtmlFromPatientList(_patients);
-        }
-    });
+    
 */
 };
 
