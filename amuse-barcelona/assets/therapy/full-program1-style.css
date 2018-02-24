@@ -9,7 +9,7 @@ section#sidebar, section#program-main-1{
 	display: table-cell;
 }
 
-/* Topbar Section */
+/* Topbar Section 
 section#topbar{
 	height: 75px;
 	padding: 0 25px;
@@ -64,7 +64,7 @@ section#topbar:after{
 	bottom: 0;
 }
 
-/* Sidebar Section */
+/* Sidebar Section 
 section#sidebar{
 	width: 130px;
 	height: calc(100vh - 75px);
@@ -156,8 +156,10 @@ div#program1-div-links{
 	width: 70%;
 	margin: 15px 15%;
 	padding: 3px 7px;
-	background-color: #f72;
-	border-radius: 20px;
+    background-color: white;
+	border-radius: 25px;
+    border:2px solid;
+    border-color: linear-gradient(#00C0FF 0%, #FFCF00 49%, #FC4F4F 100%);
 }
 
 p#program1-p-links{
@@ -165,5 +167,6 @@ p#program1-p-links{
 	font-size: 14px;
 	font-weight: normal;
 	text-align: center;
-	color: white;
+	color: black;
+	box-shadow: 0 3px 4px 0 rgba(0,0,0,0.03);
 }
