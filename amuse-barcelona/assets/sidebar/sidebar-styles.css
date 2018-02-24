@@ -1,0 +1,38 @@
+
+/* Sidebar Section */
+section#sidebar{
+	width: 130px;
+	height: calc(100vh - 75px);
+	background-color: #3A557A;
+}
+
+a#sidebar-link:hover{
+	text-decoration: none;
+}
+
+div#sidebar-stop-div{
+	display: table;
+	margin: 30px auto;
+}
+
+img#sidebar-stop-img{
+	margin: 0 auto;
+}
+
+div#sidebar-div{
+	display: grid;
+	margin: 20px auto;
+}
+
+img#sidebar-link-img{
+	margin: 0 auto;
+}
+
+p#sidebar-link-text{
+	font-size: 15px;
+	margin-top: 5px;
+	padding: 0 30px;
+	line-height: 17px;
+	text-align: center;
+	color: white;
+}

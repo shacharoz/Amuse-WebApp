@@ -1,0 +1,168 @@
+/* Change Bootstrap css */
+.row{
+	margin-right: 0;
+	margin-left: 0;
+}
+
+/* Base Settings */
+section#sidebar, section#program-main-1{
+	display: table-cell;
+}
+
+/* Topbar Section */
+section#topbar{
+	height: 75px;
+	padding: 0 25px;
+	background-color: white;
+	position: relative;
+}
+
+.topbar-thing{
+	display: inline-block;
+	line-height: 70px;
+}
+
+img#topbar-back{
+	height: 30px;
+}
+
+img#topbar-logo{
+	height: 20px;
+	margin-left: 25px;
+}
+
+p#topbar-header{
+	font-size: 20px;
+	font-weight: 500;
+	margin: 0 500px 0 70px;
+	color: #afafaf;
+}
+
+img#topbar-notifications{
+	margin: 0 50px;
+}
+
+p#topbar-patient-name{
+	font-size: 15px;
+	margin: 0;
+}
+
+img#topbar-patient-img{
+	height: 40px;
+	margin-left: 15px;
+	border-radius: 100%;
+	position: relative;
+}
+
+section#topbar:after{
+	background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 100%);
+	position: absolute;
+	content: '';
+	height: 2px;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+/* Sidebar Section */
+section#sidebar{
+	width: 130px;
+	height: calc(100vh - 75px);
+	background-color: #3A557A;
+}
+
+a#sidebar-link:hover{
+	text-decoration: none;
+}
+
+div#sidebar-stop-div{
+	display: table;
+	margin: 30px auto;
+}
+
+img#sidebar-stop-img{
+	margin: 0 auto;
+}
+
+div#sidebar-div{
+	display: grid;
+	margin: 20px auto;
+}
+
+img#sidebar-link-img{
+	margin: 0 auto;
+}
+
+p#sidebar-link-text{
+	font-size: 15px;
+	margin-top: 5px;
+	padding: 0 30px;
+	line-height: 17px;
+	text-align: center;
+	color: white;
+}
+
+/* Program1 Section */
+section#program-main-1{
+	background-color: #F9F9F9;
+}
+
+div#program1-row{
+	margin: 25px 0;
+}
+
+div#program1-body{
+	padding: 0;
+	background-color: white;
+	border: 1px solid #F2F2F2;
+	border-radius: 5px;
+}
+
+p#program1-header{
+	font-size: 17px;
+	font-weight: 700;
+	color: #333;
+	margin: 10px 0 8px 18px;
+}
+
+hr#program1-hr{
+	margin: 1px 0;
+	width: 100%;
+	background-color: #f2f2f2;
+}
+
+p#program1-description{
+	font-size: 14px;
+	font-weight: normal;
+	margin: 15px 40px 15px 20px;
+	color: #727272;
+}
+
+img#program1-img{
+	width: 100%;
+	border-radius: 0 0 5px 5px;
+}
+
+div#program1-body.col-7{
+	padding: 25px 10px 45px 20px;
+}
+
+a#program1-links:hover{
+	text-decoration: none;
+}
+
+div#program1-div-links{
+	width: 70%;
+	margin: 15px 15%;
+	padding: 3px 7px;
+	background-color: #f72;
+	border-radius: 20px;
+}
+
+p#program1-p-links{
+	margin: 0;
+	font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: white;
+}

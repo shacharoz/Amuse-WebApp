@@ -12,148 +12,28 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- Page level plugin CSS-->
-  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-  <!-- Custom styles for this template-->
-  <link href="css/sb-admin.css" rel="stylesheet">
   
-    
-    <link href="css/no-side-bar.css" rel="stylesheet">
-    <link href="css/white-theme.css" rel="stylesheet">
     <link href="css/patients-styles.css" rel="stylesheet">
-    
+        <link rel="stylesheet" href="topbar/topbar-styles.css" type="text/css">
+
 </head>
 
-<body class="fixed-nav bg-dark" id="page-top">
-  
-    <div id="menu_holder"></div>
+<body>
     
+    <section id="topbar">
+        <a href="index.html"><img src="topbar/topbar_back.png" id="topbar-back" class="topbar-thing"></a>
+        <img src="topbar/topbar_logo.png" id="topbar-logo" class="topbar-thing">
+      <p id="topbar-header" class="topbar-thing">Patients</p>
+        <a href="#"><img src="topbar/topbar_search.png" id="topbar-search" class="topbar-thing"></a><a href="#"><img src="topbar/topbar_bell.png" id="topbar-notifications" class="topbar-thing"></a>
+      <p id="topbar-patient-name" class="topbar-thing">Mickey Moore</p><img src="topbar/not-real-profile-picture.jpg" id="topbar-patient-img" class="topbar-thing">
+    </section>
     
-      <!-- Navigation-->
-  <nav class="navbar navbar-expand-lg navbar-white  fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html"><img src="Desi/assets/topbar_logo.png"/> Patients </a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      
-        
-      <ul class="navbar-nav ml-auto">
-        
-        <li class="nav-item ">
-          <a class="nav-link mr-lg-2" id="alertsDropdown" href="#" >
-            <i class="fa fa-fw fa-bell"></i>
-          </a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link mr-lg-2" id="alertsDropdown" href="#" >
-            <i class="fa fa-fw fa-bell"></i>
-          </a>
-        </li>
-          
-          <li class='nav-item'>
-              <p style='color: aliceblue'>Mickey Moore</p>
-          </li>
-          <li class='nav-item'>
-              <img class='d-flex mr-3 rounded-circle' src='http://placehold.it/30x30' alt=''>
-              
-          </li>
-          
-       
-      </ul>
-    </div>
-  </nav>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                  
     <section id="patients">
-      <div id="patients-row" class="row justify-content-center">
-        <div id="three-p" class="col-11">
-          <div id="three-p-row" class="row">
-              <a href="#" id="patient-link" class="col-4">
-              <div id="patient-body" class="row"><img src="img/not-real-profile-picture.jpg" id="patient-picture" class="col-6">
-                <p id="patient-name" class="col-6">Yuval<br>	Goldschmidt</p>
-              </div>
-              </a>
-              
-              <a href="#" id="patient-link" class="col-4">
-              <div id="patient-body" class="row"><img src="img/not-real-profile-picture.jpg" id="patient-picture" class="col-6">
-                <p id="patient-name" class="col-6">Yuval<br>	Goldschmidt</p>
-              </div>
-              </a>
-              
-              <a href="#" id="patient-link" class="col-4">
-              <div id="patient-body" class="row"><img src="img/not-real-profile-picture.jpg" id="patient-picture" class="col-6">
-                <p id="patient-name" class="col-6">Yuval<br>	Goldschmidt</p>
-              </div>
-              </a>
-              
-              
-            </div>
-            </div>
-            </div>
-        <div id="patients-row" class="row justify-content-center">
-        <div id="three-p" class="col-11">
-          <div id="three-p-row" class="row">
-              <a href="#" id="patient-link" class="col-4">
-              <div id="patient-body" class="row"><img src="img/not-real-profile-picture.jpg" id="patient-picture" class="col-6">
-                <p id="patient-name" class="col-6">Yuval<br>	Goldschmidt</p>
-              </div>
-              </a>
-              
-              <a href="#" id="patient-link" class="col-4">
-              <div id="patient-body" class="row"><img src="img/not-real-profile-picture.jpg" id="patient-picture" class="col-6">
-                <p id="patient-name" class="col-6">Yuval<br>	Goldschmidt</p>
-              </div>
-              </a>
-              
-              <a href="#" id="patient-link" class="col-4">
-              <div id="patient-body" class="row"><img src="img/not-real-profile-picture.jpg" id="patient-picture" class="col-6">
-                <p id="patient-name" class="col-6">Yuval<br>	Goldschmidt</p>
-              </div>
-              </a>
-              
-              
-            </div>
-            </div>
-            </div>
-          
-        <div id="patients-row" class="row justify-content-center">
-        <div id="three-p" class="col-11">
-          <div id="three-p-row" class="row">
-              <a href="#" id="patient-link" class="col-4">
-              <div id="patient-body" class="row"><img src="img/not-real-profile-picture.jpg" id="patient-picture" class="col-6">
-                <p id="patient-name" class="col-6">Yuval<br>	Goldschmidt</p>
-              </div>
-              </a>
-              
-              <a href="#" id="patient-link" class="col-4">
-              <div id="patient-body" class="row"><img src="img/not-real-profile-picture.jpg" id="patient-picture" class="col-6">
-                <p id="patient-name" class="col-6">Yuval<br>	Goldschmidt</p>
-              </div>
-              </a>
-              
-              <a href="#" id="patient-link" class="col-4">
-              <div id="patient-body" class="row"><img src="img/not-real-profile-picture.jpg" id="patient-picture" class="col-6">
-                <p id="patient-name" class="col-6">Yuval<br>	Goldschmidt</p>
-              </div>
-              </a>
-              
-              
-            </div>
-            </div>
-            </div>
-          
-            </section>
+      
+            <div id="paients_data_holder"></div>
 
-    <div id="paients_data_holder"></div>
+    </section>
+    
 
     
     
@@ -162,17 +42,7 @@
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
-    <!-- Custom scripts for this page-->
-    <script src="js/sb-admin-datatables.min.js"></script>
-    <script src="js/sb-admin-charts.min.js"></script>
+    <!-- for this page : content loading -->
     <script src="amuse-data/patientsTranslator.js"></script>
 
     </body>

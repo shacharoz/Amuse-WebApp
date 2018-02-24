@@ -1,23 +1,36 @@
 function formatHtmlFromPatientList(_patients) {
-    var allItemsInHtml = "<div class='row'>";
+    var allItemsInHtml = "";
 
 
+    var StartingNewRow = "<div id='patients-row' class='row justify-content-center'>  <div id='three-p' class='col-11'> <div id='three-p-row' class='row'> ";
+    
+    var EndingRow = "</div> </div> </div>";
+    
     //generate items
-    var currentItemHtmlTemplate = "";
+    var currentItemHtmlTemplate = StartingNewRow;
 
+    
 
     for (var i = 0; i < _patients.length; i++) {
+        
+        //check if we have more items
+        if (i % 3 == 0){
+            allItemsInHtml += EndingRow;
+            
+            if (_patients.length > i ){
+                allItemsInHtml += StartingNewRow;
+            }
+        }
+        
+        
         var currentItemData = _patients[i];
 
         //template for image based item
-
-        currentItemHtmlTemplate = "<div class='col-4'>";
-        currentItemHtmlTemplate += "<a class='list-group-item list-group-item-action' href='programs.html'>";
-        currentItemHtmlTemplate += "<div class='media'> ";
-        currentItemHtmlTemplate += "<img class='d-flex mr-3 rounded-circle' src=" + currentItemData.image_path + " alt=''>";
-        currentItemHtmlTemplate += "<div class='media-body'>";
-        currentItemHtmlTemplate += "<strong>" + currentItemData.fullname + "</strong>";
-        currentItemHtmlTemplate += "</div></div></a></div>";
+        
+        currentItemHtmlTemplate = "<a href='programs.html' id='patient-link' class='col-4'>";
+        currentItemHtmlTemplate += "<div id='patient-body' class='row'><img src='" + currentItemData.image_path + "' id='patient-picture' class='col-6'>";
+        currentItemHtmlTemplate += "<p id='patient-name' class='col-6'>" + currentItemData.fullname + "</p>";
+        currentItemHtmlTemplate += "</div></a>";
 
         allItemsInHtml += currentItemHtmlTemplate;
     }
@@ -33,7 +46,7 @@ function formatHtmlFromPatientList(_patients) {
 var GetAllPatientsData = function() {
     
       var _patients = [
-            {
+            { 
                 "fullname": "roni benizri"
                 , "image_path" : "http://placehold.it/100x100"
                 , "gender" : "male"

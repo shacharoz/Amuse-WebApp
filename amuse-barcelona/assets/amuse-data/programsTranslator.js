@@ -1,33 +1,50 @@
 function formatHtmlFromTherapyList(_programs) {
-    var allItemsInHtml = "<div class='row'>";
+    var allItemsInHtml = "";
 
+    
+    var StartingNewRow = "<div id='programs-row' class='row justify-content-center'>  <div id='three-p' class='col-11'> <div id='three-p-row' class='row'> ";
+    
+    var EndingRow = "</div> </div> </div>";
+    
+    
 
     //generate items
-    var currentItemHtmlTemplate = "";
+    var currentItemHtmlTemplate = StartingNewRow;
 
 
     for (var i = 0; i < _programs.length; i++) {
+        
+        //check if we have more items
+        if (i % 3 == 0){
+            allItemsInHtml += EndingRow;
+            
+            if (_programs.length > i ){
+                allItemsInHtml += StartingNewRow;
+            }
+        }
+
+        
         var currentItemData = _programs[i];
 
         //template for image based item
 
-        currentItemHtmlTemplate = "<div class='col-4'>";
-        currentItemHtmlTemplate += " <a href='program.html?id="+currentItemData.id+"&step=1' class='list-group-item list-group-item-action'>";
-        currentItemHtmlTemplate += "<div class='card-body'>";
-        currentItemHtmlTemplate += "<h6 class='card-title mb-1'>"+currentItemData.title+"</h6>";
-        currentItemHtmlTemplate += "</div><hr class='my-0'><div class='card-body'>";
-        currentItemHtmlTemplate += "<p class='card-text small'>"+ currentItemData.description+"</p></div>";
-        currentItemHtmlTemplate += "<div class='card-body py-2 small'><i class='fa fa-fw fa-thumbs-up'></i>1 Hour</div>";
-        currentItemHtmlTemplate += "<div class='col-md-3'><div class='card mb-4'>";
-        currentItemHtmlTemplate += "<img class='' src='"+currentItemData.main_image_path+"' alt=''>";
-        currentItemHtmlTemplate += "</div></div></a></div>";
+                
+        currentItemHtmlTemplate = "<a href='program.html?id=" + currentItemData.id + "&step=0' id='program-link' class='col-4'>";
+        currentItemHtmlTemplate += "<div id='program-body'>";
+        currentItemHtmlTemplate += "<p id='program-header'>" + currentItemData.title + "</p>";
+        currentItemHtmlTemplate += "<hr id='program-hr'>";
+        currentItemHtmlTemplate += "<p id='program-description'>" + currentItemData.description + "</p>";
+        currentItemHtmlTemplate += "<img src='programs/clock-icon.png' id='program-clock'>";
+        currentItemHtmlTemplate += "<p id='program-time'>1 hr</p>";
+        currentItemHtmlTemplate += "<img src='" + currentItemData.main_image_path + "' id='program-img'>";
+        currentItemHtmlTemplate += "</div></a>";
         
         allItemsInHtml += currentItemHtmlTemplate;
     }
 
 
     //close the row
-    allItemsInHtml += "</div>";
+    allItemsInHtml += "";
 
 
     document.getElementById("programs_data_holder").innerHTML = allItemsInHtml;

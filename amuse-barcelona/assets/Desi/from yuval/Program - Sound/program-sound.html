@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="program-sound-style-dist.css" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.14/jquery-ui.min.js"></script>
+    <script>
+      $('document').ready(function(){
+      	var volpos = $('img#program-sound-power-button').position();
+      	var volpos_left = volpos.left - 35;
+      	$('img#program-sound-power-button').css('right', volpos_left + "px");
+      	$('img#program-sound-power-button').draggable({axis: "x", containment: [volpos.left, volpos.top, volpos.left + 445, volpos.top]});
+      
+      	var controlerpos = $('div#program-sound-controler').position();
+      	var controlerpos_left = controlerpos.left - 78;
+      	$('img#program-sound-controler-button').css('left', controlerpos_left + "px");
+      	$('img#program-sound-controler-button').draggable({axis: "y", containment: [controlerpos_left, controlerpos.top + 255, controlerpos_left, controlerpos.top + 450]});
+      });
+    </script>
+  </head>
+  <body>
+    <section id="program-sound">
+      <div id="program-sound-row" class="row justify-content-center">
+        <div id="two-divs" class="col-11">
+          <div id="two-divs-row" class="row justify-content-between">
+            <div id="program-sound-body" class="col-3">
+              <p id="program-sound-header">Main Control</p>
+              <hr id="program-sound-hr">
+              <div id="program-sound-inner"><img src="img/not-real-button.png" id="program-sound-button"><img src="img/not-real-button.png" id="program-sound-button"><img src="img/not-real-button.png" id="program-sound-button"></div>
+            </div>
+            <div id="program-sound-body" class="col-8">
+              <p id="program-sound-header">Main Volume</p>
+              <hr id="program-sound-hr">
+              <div id="program-sound-inner"><img src="img/vol_control_main.png" id="program-sound-power-range"><img src="img/vol_button.png" id="program-sound-power-button"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="program-sound-row" class="row justify-content-center">
+        <div id="one-div" class="col-11">
+          <div id="one-div-row" class="row justify-content-between">
+            <div id="program-sound-body" class="col-12">
+              <p id="program-sound-header">Vol Control</p>
+              <hr id="program-sound-hr">
+              <div id="program-sound-inner" class="row justify-content-center">
+                <div id="program-sound-controler" class="col-2"><img src="img/not-real-blue-line.png" id="program-sound-controler-range"><img src="img/vol_button.png" id="program-sound-controler-button"></div>
+                <div id="program-sound-controler" class="col-2"><img src="img/not-real-blue-line.png" id="program-sound-controler-range"><img src="img/vol_button.png" id="program-sound-controler-button"></div>
+                <div id="program-sound-controler" class="col-2"><img src="img/not-real-blue-line.png" id="program-sound-controler-range"><img src="img/vol_button.png" id="program-sound-controler-button"></div>
+                <div id="program-sound-controler" class="col-2"><img src="img/not-real-blue-line.png" id="program-sound-controler-range"><img src="img/vol_button.png" id="program-sound-controler-button"></div>
+                <div id="program-sound-controler" class="col-2"><img src="img/not-real-blue-line.png" id="program-sound-controler-range"><img src="img/vol_button.png" id="program-sound-controler-button"></div>
+                <div id="program-sound-controler" class="col-2"><img src="img/not-real-blue-line.png" id="program-sound-controler-range"><img src="img/vol_button.png" id="program-sound-controler-button"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

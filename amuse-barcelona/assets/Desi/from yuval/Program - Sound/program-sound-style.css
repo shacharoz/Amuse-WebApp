@@ -1,0 +1,59 @@
+/* Change Bootstrap css */
+.row{
+	margin-right: 0;
+	margin-left: 0;
+}
+
+/* Program1 Section */
+section#program-sound{
+	background-color: #F9F9F9;
+	padding: 5px 0;
+}
+
+div#program-sound-row{
+	margin: 50px 0;
+}
+
+div#program-sound-body{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0;
+	background-color: white;
+	border: 1px solid #F2F2F2;
+	border-radius: 5px;
+}
+
+p#program-sound-header{
+	font-size: 20px;
+	font-weight: 700;
+	color: #333;
+	margin: 12px 0 10px 20px;
+}
+
+hr#program-sound-hr{
+	margin: 1px 0;
+	width: 100%;
+	background-color: #f2f2f2;
+}
+
+div#program-sound-inner{
+	margin: 30px 10%;
+	text-align: center;
+	width: 80%;
+}
+
+img#program-sound-button{
+	margin: 0 3%;
+	width: 25%;
+}
+
+img#program-sound-power-button{
+	position: absolute;
+	top: 50%;
+}
+
+img#program-sound-controler-button{
+	position: absolute;
+	top: 25%;
+}
