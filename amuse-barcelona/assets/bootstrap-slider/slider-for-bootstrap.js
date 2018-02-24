@@ -1,11 +1,26 @@
 
-// With JQuery
+
+//set tooltip
 $('#bootstrap_volume_slider').slider({ 
-    id: "bootstrap_volume_slider"
-	
-    ,formatter: function(value) {
+    
+    formatter: function(value) {
 		return 'volume: ' + value;
 	}
 });
 
 
+$('#bootstrap_volume_slider').slider({  
+    tooltip: 'always'
+});
+
+
+//volume change event
+var SoundValueChange = function(){
+    console.log("volume: "+ volume_change.getValue()); // 0 to 10
+    
+    
+}
+
+var volume_change = $('#bootstrap_volume_slider').slider()
+		.on('slide', SoundValueChange)
+		.data('slider');

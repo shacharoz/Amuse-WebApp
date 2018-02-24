@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="topbar/topbar-styles.css" type="text/css">
   <link rel="stylesheet" href="sidebar/sidebar-styles.css" type="text/css">
   <link rel="stylesheet" href="therapy/full-program1-style.css" type="text/css">
+  <link rel="stylesheet" href="sound/program-sound-style.css" type="text/css">
  
 </head>
 
@@ -31,8 +32,9 @@
     <section id="topbar">
         <a href="programs.html"><img src="topbar/topbar_back.png" id="topbar-back" class="topbar-thing" /></a>
             <img src="topbar/topbar_logo.png" id="topbar-logo" class="topbar-thing" />
-      <p id="topbar-header" class="topbar-thing">Program: </p>
-        <a href="#"><img src="topbar/topbar_search.png" id="topbar-search" class="topbar-thing" /></a><a href="#"><img src="topbar/topbar_bell.png" id="topbar-notifications" class="topbar-thing"></a>
+      <p id="topbar-header" class="topbar-thing">Sound Controls</p>
+        <a href="#"><img src="topbar/topbar_search.png" id="topbar-search" class="topbar-thing" /></a>
+        <a href="#"><img src="topbar/topbar_bell.png" id="topbar-notifications" class="topbar-thing"></a>
       <p id="topbar-patient-name" class="topbar-thing">Mickey Moore</p><img src="topbar/not-real-profile-picture.jpg" id="topbar-patient-img" class="topbar-thing">
     </section>
     
@@ -73,130 +75,59 @@
         </a>
     </section>
     
-    
-    
-    <div class="content-wrapper">
-        <div class="container-fluid">
-      
-      <!-- Icon Cards-->
-      
-        <!-- Example Notifications Card-->
-        <div class="card mb-3">
-               
-            <div class="list-group list-group-flush small">
-
-                <div class="row">
-                    <div class="col-3">
-                        
-                    <div class="list-group-item list-group-item-action">
-                        
-                        <strong>Main Control</strong>
-                        
-                        <div class="media">
-                          <div class="media-body">
-                            <div class="row">
-                                <div class="col-3">
-                                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
-                                </div>
-                                <div class="col-3">
-                                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
-                                </div>
-                                <div class="col-3">
-                                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                        
-                    </div>
-                        
-                        
-                        
+     <section id="program-main-1">
+        <div id="program-sound-row" class="row justify-content-center">
+        <div id="two-divs" class="col-11">
+          <div id="two-divs-row" class="row justify-content-between">
+            <div id="program-sound-body" class="col-3">
+              <p id="program-sound-header">Main Control</p>
+              <hr id="program-sound-hr">
+              <div id="program-sound-inner">
+                <a href="#"><img src="Desi/assets/play_program.png" id="program-sound-button" /></a>   
+                  <a href="#">
+                      <img src="Desi/assets/sound_pause_off.png" id="program-sound-button"/>
+                  </a>
+                  <a href="#">
+                    <img src="Desi/assets/sound_stop_off.png" id="program-sound-button"/>
+                  </a>
+            </div>
+            </div>
+            <div id="program-sound-body" class="col-8">
+              <p id="program-sound-header">Main Volume</p>
+              <hr id="program-sound-hr">
+                <div id="program-sound-inner">
+                
+                    <input id="bootstrap_volume_slider" data-slider-id='volume_slider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="7" />
                 </div>
-                    
-                    
-                    <div class="col-6">
-                        
-                    <div class="list-group-item list-group-item-action">
-                        
-                        <strong>Main Volume</strong>
-                        
-                        <div class="media">
-                          <div class="media-body">
-                            <input id="bootstrap_volume_slider" data-slider-id='ex1Slider' type="text" data-slider-handle="custom" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
-                              
-                        </div>
-                      </div>
-                        
-                    </div>
-                        
+            </div>
+          </div>
+        </div>
+      </div>   
+                
+         <div id="program-sound-row" class="row justify-content-center">
+            <div id="one-div" class="col-11">
+              <div id="one-div-row" class="row justify-content-between">
+                <div id="program-sound-body" class="col-12">
+                  <p id="program-sound-header">Vol Control</p>
+                  <hr id="program-sound-hr">
+
+                <img class="d-flex mr-3" src="./Desi/assets/vol_control.png" alt="">               
+                </div>
                 </div>
 
             </div>
-                
-                <div class="row">
-                    <div class="col-10">
-                             
-                    <div class="list-group-item list-group-item-action">
-                        
-                        <strong>Volume Control</strong>
-                        
-                        <div class="media">
-                          <div class="media-body">
-                              <img class="d-flex mr-3" src="./Desi/assets/vol_control.png" alt="">                               
-                        </div>
-                      </div>
-                        
-                    </div>
-                    </div>
-                </div>
-                
         </div>
-    </div>
-    <!-- /.container-fluid-->
-    <!-- /.content-wrapper-->
-        
-        
-        </div> 
-        
-        
-        
-        
-    <footer class="sticky-footer">
-      <div class="container">
-        <div class="text-center">
-          <small>Copyright © Thalamus 2018</small>
-        </div>
-      </div>
-    </footer>
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fa fa-angle-up"></i>
-    </a>
-    
-        
-        
-        
+</section> 
+         
+         
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
-    <!-- Custom scripts for this page-->
-    <script src="js/sb-admin-datatables.min.js"></script>
-    <script src="js/sb-admin-charts.min.js"></script>
         
         
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
-    <script src="bootstrap-slider/slider-for-bootstrap.js"></script>
+    <script src="bootstrap-slider/slider-for-bootstrap.js" type="text/javascript"></script>
         
-  </div>
 </body>
 
 </html>

@@ -89,20 +89,21 @@ function values_menu() {
 
 //called from html button
 function values_physical(){
-   var theraputic_value_html = "<p id='program1-header'>Physical Therapy</p>       <hr id='program1-hr'>";
+    var theraputic_value_html = "<p id='program1-header'>";
+    theraputic_value_html += "<a href='javascript:values_menu();'><img src='topbar/topbar_back.png' style='height:15px' id='topbar-back' /></a>";
+   theraputic_value_html += " Physical Therapy</p>       <hr id='program1-hr'>";
    theraputic_value_html += "<p id='program1-description'>"+ currentStepData.values.physical_therapy +"</p> </div>";
-   theraputic_value_html += "<a id='sidebar-link'  href='javascript:values_menu();'>back</a>";
     
     document.getElementById("theraputic-values-content-holder").innerHTML = theraputic_value_html;
-    
 }
 
 //called from html button
 function values_musical(){
 
-   var theraputic_value_html = "<p id='program1-header'>Physical Therapy</p>       <hr id='program1-hr'>";
+    var theraputic_value_html = "<p id='program1-header'>";
+    theraputic_value_html += "<a href='javascript:values_menu();'><img src='topbar/topbar_back.png' style='height:15px' id='topbar-back' /></a>";
+   theraputic_value_html += " Music Therapy</p>       <hr id='program1-hr'>";  
    theraputic_value_html += "<p id='program1-description'>"+ currentStepData.values.music_therapy +"</p> </div>";
-   theraputic_value_html += "<a id='sidebar-link'  href='javascript:values_menu();'>back</a>";
     
     document.getElementById("theraputic-values-content-holder").innerHTML = theraputic_value_html;
     
@@ -111,9 +112,10 @@ function values_musical(){
 //called from html button
 function values_occupational(){
 
-   var theraputic_value_html = "<p id='program1-header'>Physical Therapy</p>       <hr id='program1-hr'>";
+     var theraputic_value_html = "<p id='program1-header'>";
+    theraputic_value_html += "<a href='javascript:values_menu();'><img src='topbar/topbar_back.png' style='height:15px' id='topbar-back' /></a>";
+   theraputic_value_html += " Occupational Therapy</p>       <hr id='program1-hr'>";  
    theraputic_value_html += "<p id='program1-description'>"+ currentStepData.values.occupational_therapy +"</p> </div>";
-   theraputic_value_html += "<a id='sidebar-link'  href='javascript:values_menu();'>back</a>";
     
     document.getElementById("theraputic-values-content-holder").innerHTML = theraputic_value_html;
     
@@ -122,9 +124,11 @@ function values_occupational(){
 //called from html button
 function values_speech(){
    
-   var theraputic_value_html = "<p id='program1-header'>Physical Therapy</p>       <hr id='program1-hr'>";
+     var theraputic_value_html = "<p id='program1-header'>";
+    theraputic_value_html += "<a href='javascript:values_menu();'><img src='topbar/topbar_back.png' style='height:15px' id='topbar-back' /></a>";
+   theraputic_value_html += " Speech-Language Therapy</p>       <hr id='program1-hr'>";  
    theraputic_value_html += "<p id='program1-description'>"+ currentStepData.values.speech_language_therapy +"</p> </div>";
-   theraputic_value_html += "<a id='sidebar-link'  href='javascript:values_menu();'>back</a>"; 
+   
     
     document.getElementById("theraputic-values-content-holder").innerHTML = theraputic_value_html;
     

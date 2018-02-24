@@ -1,21 +1,29 @@
-.slider-handle.custom {
-	background: transparent none;
-	/* You can customize the handle and set a background image */
-}
-
 /* Or display content like unicode characters or fontawesome icons */
+
+
+.slider-handle.custom {
+    background: transparent none;
+    background-image: url("Desi/assets/sound_stop_off.png");
+
+}
+
 .slider-handle.custom::before {
-	line-height: 15px;
+	line-height: 30px;
+    margin-left: -10px;
 	font-size: 50px;
-	content: '\2605'; /*'./Desi/assets/vol_button.png' ; /*unicode star character    '\2605' */
-	color: #726204;
+    background-image: url("Desi/assets/sound_stop_off.png");
+
+    /*content: '\2605'; 
+	color: #726204;*/  
 }
 
-
-#bootstrap_volume_slider .slider-selection  {
-	background: red;
+#volume_slider .slider-selection  {
+	background: linear-gradient(90deg, #2D4360 0%, #395579 100%);
+    /*    
+	background: linear-gradient(90deg, #FAD961 0%, #F77120 43.79%);*/
 }
 
-#bootstrap_volume_slider .slider-track-high {
-	background: green;
+.slider-handle {
+    background: #FFBA48;
+    border: 5px #ACACAC solid;
 }

@@ -8,7 +8,7 @@
     <script>
       $('document').ready(function(){
       	var volpos = $('img#program-sound-power-button').position();
-      	var volpos_left = volpos.left - 35;
+      	var volpos_left = volpos.left - 100;
       	$('img#program-sound-power-button').css('right', volpos_left + "px");
       	$('img#program-sound-power-button').draggable({axis: "x", containment: [volpos.left, volpos.top, volpos.left + 445, volpos.top]});
       

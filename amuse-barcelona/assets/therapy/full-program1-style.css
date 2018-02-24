@@ -105,6 +105,7 @@ p#sidebar-link-text{
 /* Program1 Section */
 section#program-main-1{
 	background-color: #F9F9F9;
+    width: 100%;
 }
 
 div#program1-row{
