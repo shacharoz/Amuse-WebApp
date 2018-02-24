@@ -45,15 +45,23 @@ function formatHtmlFromTherapy(current_index) {
     var step_activity_holder_html = "<p id='program1-description'><b>Activity:</b><br>" + currentStepData.activity + "</p>";
     step_activity_holder_html += "<p id='program1-description'><b>Content response:</b><br>" + currentStepData.response + "</p>";
     
-    
     document.getElementById("activity-response-holder").innerHTML = step_activity_holder_html;
-    
-    
     
     
     
     //theraputic values
     values_menu();
+    
+    
+    
+    
+    
+    // update the play stop button 
+    if (ReadApplicationState(_program_id) == false){
+        TogglePlayStopButton(true);
+    } else {
+        TogglePlayStopButton(false);
+    }
     
 }
 
@@ -89,7 +97,7 @@ function values_menu() {
 //called from html button
 function values_physical(){
     var theraputic_value_html = "<p id='program1-header'>";
-    theraputic_value_html += "<a href='javascript:values_menu();'><img src='topbar/topbar_back.png' style='height:15px' id='topbar-back' /></a>";
+    theraputic_value_html += "<a href='javascript:values_menu();'> <img src='topbar/topbar_back.png' style='height:15px' id='topbar-back' /></a>";
    theraputic_value_html += " Physical Therapy</p>       <hr id='program1-hr'>";
    theraputic_value_html += "<p id='program1-description'>"+ currentStepData.values.physical_therapy +"</p> </div>";
     
@@ -160,14 +168,33 @@ function steps_next() {
 }
 
 
+
+
 //called from the html button 
 function activate_program(){
-    //call function here
+    //console.log("activate_program" );
+    
+    //replace button to stop
+    TogglePlayStopButton(false);
+    
+    //call server function here with program id and step id
+    
+    //make sure all pages remember the app is playing  
+    SaveApplicationState(_program_id, true);
+    
 }
 
 //called from the html button 
 function deactivate_program(){
-    //call function here
+    //console.log("deactivate_program" );
+    
+    //replace button to play
+    TogglePlayStopButton(true);
+    
+    //call server function here
+    
+    //make sure all pages remember the app is playing  
+    SaveApplicationState(_program_id, false);
 }
 
 var GetSpeicificStep = function(program_id, step_index) {
