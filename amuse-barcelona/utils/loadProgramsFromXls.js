@@ -1,28 +1,29 @@
-var XLSX = require('xlsx');
-var _ = require('lodash');
+const XLSX = require('xlsx');
+const _ = require('lodash');
+const axios = require('axios');
 
 
-var workbook = XLSX.readFile('./dataToFeed/Appdata.xlsx');
-var sheet_name_list = workbook.SheetNames;
-var allData = {};
+const workbook = XLSX.readFile('./dataToFeed/Appdata.xlsx');
+const sheet_name_list = workbook.SheetNames;
+const allData = {};
 
 sheet_name_list.forEach(function(y) {
-    var worksheet = workbook.Sheets[y];
-    var headers = {};
-    var data = [];
+    const worksheet = workbook.Sheets[y];
+    const headers = {};
+    const data = [];
     for(z in worksheet) {
         if(z[0] === '!') continue;
         //parse out the column, row, and value
-        var tt = 0;
-        for (var i = 0; i < z.length; i++) {
+        let tt = 0;
+        for (let i = 0; i < z.length; i++) {
             if (!isNaN(z[i])) {
                 tt = i;
                 break;
             }
         };
-        var col = z.substring(0,tt);
-        var row = parseInt(z.substring(tt));
-        var value = worksheet[z].v;
+        const col = z.substring(0,tt);
+        const row = parseInt(z.substring(tt));
+        const value = worksheet[z].v;
 
         //store header names
         if(row == 1 && value) {
@@ -65,6 +66,8 @@ _.forEach(allData, (sheet, sheetName) => {
     _.set(programStep,'values.occupational_therapy', currentRow['ריפוי בעיסוק']);
     _.set(programStep,'values.speach_language_therapy', currentRow['קלינאות תקשורת']);
     _.set(programStep,'values.music_therapy', currentRow['תרפיה במוזיקה ']);
+    _.set(programStep,'music_command', currentRow['מחשב מוסיקה']);
+    _.set(programStep,'video_command', currentRow['מחשב וידאו']);
     newProgram.steps.push(programStep);
 }
     });
@@ -73,6 +76,22 @@ _.forEach(allData, (sheet, sheetName) => {
 });
 
 
+_.forEach(formattedData,(program) => {
+  axios.post('http://localhost:1337/program', _.omit(program,'steps'))
+    .then((response) => {
+      console.log(response.data);
+      const programId = response.data.id;
+      _.forEach(program.steps,(step) => {
+        axios.post('http://localhost:1337/therapy', _.set(step,'programId',programId))
+          .then((response2) => {
+            console.log(response2.data);
+          });
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    })
 
+});
 
-console.log(allData);
+//console.log(formattedData);
