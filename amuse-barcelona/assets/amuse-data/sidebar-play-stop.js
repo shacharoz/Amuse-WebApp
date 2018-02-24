@@ -4,9 +4,9 @@ var stop_button_html ="<a href='javascript:deactivate_program();' id='sidebar-li
 
 
 
-var TogglePlayStopButton = function (shouldBePlay){
+var TogglePlayStopButton = function (shouldBePlay) {
     //console.log("shouldBePlay "+shouldBePlay);
-    if (shouldBePlay == true){
+    if (shouldBePlay == true) {
         document.getElementById("play-stop-button").innerHTML = play_button_html;
     } else {
         document.getElementById("play-stop-button").innerHTML = stop_button_html;
