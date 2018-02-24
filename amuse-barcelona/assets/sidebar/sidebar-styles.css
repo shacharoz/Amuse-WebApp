@@ -2,7 +2,7 @@
 /* Sidebar Section */
 section#sidebar{
 	width: 130px;
-	height: calc(100vh - 75px);
+	height: 200px; /*calc(100vh - 75px);*/
 	background-color: #3A557A;
 }
 

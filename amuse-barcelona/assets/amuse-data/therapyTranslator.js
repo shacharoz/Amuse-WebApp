@@ -57,11 +57,10 @@ function formatHtmlFromTherapy(current_index) {
     
 }
 
+
 function values_menu() {
 
     var theraputic_value_html = "<p id='program1-header'>Theraputic Values</p>       <hr id='program1-hr'>";
-    
-    
     
     
     if (currentStepData.values.physical_therapy != ""){
