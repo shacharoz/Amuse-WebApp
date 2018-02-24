@@ -163,11 +163,25 @@ function steps_next() {
 //called from the html button
 function activate_program(){
     //call function here
+  $.get("/therapy/activate?therapyId=" + program_id, function (data,status) {
+    if (status !== "success") {
+      console.log("Error while starting therapy." +  _program_id + " status:" + status);
+    } else {
+      currentProgramData = data;
+    }
+  });
 }
 
 //called from the html button
 function deactivate_program(){
-    //call function here
+
+  $.get("/therapy/deactivate?therapyId=" + program_id, function (data,status) {
+    if (status !== "success") {
+      console.log("Error while stopping therapy." +  _program_id + " status:" + status);
+    } else {
+      currentProgramData = data;
+    }
+  });
 }
 
 var GetSpeicificStep = function(program_id, step_index) {
