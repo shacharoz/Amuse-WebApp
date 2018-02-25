@@ -1,6 +1,6 @@
-var play_button_html = "<a href='javascript:activate_program();' id='sidebar-link'>    <div id='sidebar-stop-div'>            <img src='Desi/assets/play_program.png' id='sidebar-play-img' />            </div>  </a>";
+var play_button_html = "<a href='javascript:activate_program();' id='sidebar-link'>    <div id='sidebar-stop-div'>            <img src='_view/Desi/assets/play_program.png' id='sidebar-play-img' />            </div>  </a>";
 
-var stop_button_html ="<a href='javascript:deactivate_program();' id='sidebar-link'>    <div id='sidebar-stop-div'>    <img src='Desi/assets/stop_program.png' id='sidebar-stop-img' />   </div>    </a>";
+var stop_button_html ="<a href='javascript:deactivate_program();' id='sidebar-link'>    <div id='sidebar-stop-div'>    <img src='_view/Desi/assets/stop_program.png' id='sidebar-stop-img' />   </div>    </a>";
 
 
 

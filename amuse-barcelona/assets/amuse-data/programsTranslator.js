@@ -53,57 +53,60 @@ function formatHtmlFromTherapyList(_programs) {
 
 var GetAllProgramsData = function() {
 
+    var _result = [
     
-const serverRespone = {};
+             {
+                 "title": "program title"
+                 , "description" : "program description program description program description"
+                 , "main_image_path": "http://placehold.it/200x200"
+                 , "id": 1
+             }
+         ,
+             {
+                 "title": "program title"
+                 , "description" : "program description program description program description"
+                 , "main_image_path": "http://placehold.it/200x200"
+                 , "id": 2
+             }
+         ,
+             {
+                 "title": "program title"
+                 , "description" : "program description program description program description"
+                 , "main_image_path": "http://placehold.it/200x200"
+                 , "id": 3
+             }
+         ,
+             {
+                 "title": "program title"
+                 , "description" : "program description program description program description"
+                 , "main_image_path": "http://placehold.it/200x200"
+                 , "id": 4
+             }
+
+            ];
+     
+    var serverRespone = {};
 
     //therapy
-$.get("/program", function (data,status) {
-    if (status !== "success") {
-        console.log("Error while updating patients data from server. status:" + status);
-    } else {
-        var _programs = data;
+    $.get("/program", function (data,status) {
+        
+        if (status !== "success") {
+            console.log("Error while updating patients data from server. status:" + status);
 
-        formatHtmlFromTherapyList(_programs);
-    }
-});
+        } else {
+             _result = data;
+
+        }
+    }).fail(function() {
+        
+         console.log("Error while updating patients data from server.");
+
+    });
+
+    formatHtmlFromTherapyList(_result);
 
 
-    // var _programs = [
-    //
-    //     {
-    //         "title": "program title"
-    //         , "description" : "program description program description program description"
-    //         , "main_image_path": "http://placehold.it/200x200"
-    //         , "id": 1
-    //     }
-    // ,
-    //     {
-    //         "title": "program title"
-    //         , "description" : "program description program description program description"
-    //         , "main_image_path": "http://placehold.it/200x200"
-    //         , "id": 2
-    //     }
-    // ,
-    //     {
-    //         "title": "program title"
-    //         , "description" : "program description program description program description"
-    //         , "main_image_path": "http://placehold.it/200x200"
-    //         , "id": 3
-    //     }
-    // ,
-    //     {
-    //         "title": "program title"
-    //         , "description" : "program description program description program description"
-    //         , "main_image_path": "http://placehold.it/200x200"
-    //         , "id": 4
-    //     }
-    //
-    // ];
-    //
-    //
-    //
-    // */
-};
+ };
 
 GetAllProgramsData();
 

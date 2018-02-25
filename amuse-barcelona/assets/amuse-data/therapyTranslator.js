@@ -8,6 +8,7 @@ var _step_index = parseInt(page_parameters.searchParams.get("step") , 10);
 
 
 
+
 function formatHtmlFromTherapy(current_index) {
 
     currentStepData = currentProgramData[current_index];
@@ -66,6 +67,11 @@ function formatHtmlFromTherapy(current_index) {
 }
 
 
+
+
+
+
+
 function values_menu() {
 
     var theraputic_value_html = "<p id='program1-header'>Theraputic Values</p>       <hr id='program1-hr'>";
@@ -97,7 +103,7 @@ function values_menu() {
 //called from html button
 function values_physical(){
     var theraputic_value_html = "<p id='program1-header'>";
-    theraputic_value_html += "<a href='javascript:values_menu();'><img src='topbar/topbar_back.png' style='height:15px' id='topbar-back' /></a>";
+    theraputic_value_html += "<a href='javascript:values_menu();'><img src='_view/topbar/topbar_back.png' style='height:15px' id='topbar-back' /></a>";
    theraputic_value_html += " Physical Therapy</p>       <hr id='program1-hr'>";
    theraputic_value_html += "<p id='program1-description'>"+ currentStepData.values.physical_therapy +"</p> </div>";
 
@@ -108,7 +114,7 @@ function values_physical(){
 function values_musical(){
 
     var theraputic_value_html = "<p id='program1-header'>";
-    theraputic_value_html += "<a href='javascript:values_menu();'><img src='topbar/topbar_back.png' style='height:15px' id='topbar-back' /></a>";
+    theraputic_value_html += "<a href='javascript:values_menu();'><img src='_view/topbar/topbar_back.png' style='height:15px' id='topbar-back' /></a>";
    theraputic_value_html += " Music Therapy</p>       <hr id='program1-hr'>";
    theraputic_value_html += "<p id='program1-description'>"+ currentStepData.values.music_therapy +"</p> </div>";
 
@@ -120,7 +126,7 @@ function values_musical(){
 function values_occupational(){
 
      var theraputic_value_html = "<p id='program1-header'>";
-    theraputic_value_html += "<a href='javascript:values_menu();'><img src='topbar/topbar_back.png' style='height:15px' id='topbar-back' /></a>";
+    theraputic_value_html += "<a href='javascript:values_menu();'><img src='_view/topbar/topbar_back.png' style='height:15px' id='topbar-back' /></a>";
    theraputic_value_html += " Occupational Therapy</p>       <hr id='program1-hr'>";
    theraputic_value_html += "<p id='program1-description'>"+ currentStepData.values.occupational_therapy +"</p> </div>";
 
@@ -132,7 +138,7 @@ function values_occupational(){
 function values_speech(){
 
      var theraputic_value_html = "<p id='program1-header'>";
-    theraputic_value_html += "<a href='javascript:values_menu();'><img src='topbar/topbar_back.png' style='height:15px' id='topbar-back' /></a>";
+    theraputic_value_html += "<a href='javascript:values_menu();'><img src='_view/topbar/topbar_back.png' style='height:15px' id='topbar-back' /></a>";
    theraputic_value_html += " Speech-Language Therapy</p>       <hr id='program1-hr'>";
    theraputic_value_html += "<p id='program1-description'>"+ currentStepData.values.speech_language_therapy +"</p> </div>";
 
@@ -140,6 +146,7 @@ function values_speech(){
     document.getElementById("theraputic-values-content-holder").innerHTML = theraputic_value_html;
 
 }
+
 
 
 
@@ -166,6 +173,10 @@ function steps_next() {
         window.open(_url, '_self');
     }
 }
+
+
+
+
 
 
 //called from the html button
@@ -209,31 +220,20 @@ function deactivate_program(){
     SaveApplicationState(_program_id, false);
 }
 
+
+
+
+
+
 var GetSpeicificStep = function(program_id, step_index) {
 
-  const serverRespone = {};
-
-  $.get("/therapy?programId=" + program_id, function (data,status) {
-    if (status !== "success") {
-      console.log("Error while updating patients data from server. status:" + status);
-    } else {
-      currentProgramData = data;
-
-
-
-      formatHtmlFromTherapy(currentProgramData);
-    }
-  });
-
-    //console.log("data: "+program_id + " "+ step_index);
-
-     var _program =
+    var _result =
         [
             {
                  "title": "program title 1"
                  , "description" : "program description program description program description"
-                 , "main_image_path": "http://placehold.it/200x200"
-                , "sensor_system_image": "http://placehold.it/200x200"
+                 , "main_image_path": "http://placehold.it/1000x700"
+                , "sensor_system_image": "http://placehold.it/1000x700"
                 , "activity" : "activity activity activity activity activity activity "
                  , "response" : "response response response response response response "
                  , "values" : {
@@ -245,50 +245,83 @@ var GetSpeicificStep = function(program_id, step_index) {
                  , "activate_link" : "c://path_to_file.lnk"
                  , "id": 1
             } 
-        ];
-            
-    //       , {
-    //             "title": "program title 2"
-    //             , "description" : "program description program description program description"
-    //             , "main_image_path": "http://placehold.it/200x200"
-    //             , "sensor_system_image": "http://placehold.it/200x200"
-    //             , "activity" : "activity activity activity activity activity activity "
-    //             , "response" : "response response response response response response "
-    //             , "values" : {
-    //                 "physical_therapy" : "some text here"
-    //                 , "occupational_therapy" : ""
-    //                 , "speech_language_therapy" : "some text here"
-    //                 , "music_therapy" : ""
-    //             }
-    //             , "activate_link" : "c://path_to_file.lnk"
-    //             , "id": 1
-    //        }
-    //        ,
-    //        {
-    //             "title": "program title 3"
-    //             , "description" : "program description program description program description"
-    //             , "main_image_path": "http://placehold.it/200x200"
-    //             , "sensor_system_image": "http://placehold.it/200x200"
-    //             , "activity" : "activity activity activity activity activity activity "
-    //             , "response" : "response response response response response response "
-    //             , "values" : {
-    //                 "physical_therapy" : "some text here"
-    //                 , "occupational_therapy" : ""
-    //                 , "speech_language_therapy" : "some text here"
-    //                 , "music_therapy" : ""
-    //             }
-    //             , "activate_link" : "c://path_to_file.lnk"
-    //             , "id": 1
-    //        }
-    //
-    //     ];
+     ,
+                   {
+                 "title": "program title 2"
+                 , "description" : "program description program description program description"
+                 , "main_image_path": "http://placehold.it/1000x700"
+                , "sensor_system_image": "http://placehold.it/700x300"
+                , "activity" : "activity activity activity activity activity activity "
+                 , "response" : "response response response response response response "
+                 , "values" : {
+                     "physical_therapy" : "some text here"
+                     , "occupational_therapy" : "some text here"
+                     , "speech_language_therapy" : "some text here"
+                     , "music_therapy" : ""
+                 }
+                 , "activate_link" : "c://path_to_file.lnk"
+                 , "id": 22
+            } 
+     ,
+                   {
+                 "title": "program title 3"
+                 , "description" : "program description program description program description"
+                 , "main_image_path": "http://placehold.it/1000x700"
+                , "sensor_system_image": "http://placehold.it/700x300"
+                       , "activity" : "activity activity activity activity activity activity "
+                 , "response" : "response response response response response response "
+                 , "values" : {
+                     "physical_therapy" : "some text here"
+                     , "occupational_therapy" : ""
+                     , "speech_language_therapy" : ""
+                     , "music_therapy" : "some text here"
+                 }
+                 , "activate_link" : "c://path_to_file.lnk"
+                 , "id": 112
+            } 
+     ,
+               {
+                 "title": "program title 4"
+                 , "description" : "program description program description program description"
+                 , "main_image_path": "http://placehold.it/200x200"
+                , "sensor_system_image": "http://placehold.it/200x200"
+                , "activity" : "activity activity activity activity activity activity "
+                 , "response" : "response response response response response response "
+                 , "values" : {
+                     "physical_therapy" : ""
+                     , "occupational_therapy" : "some text here"
+                     , "speech_language_therapy" : "some text here"
+                     , "music_therapy" : "some text here"
+                 }
+                 , "activate_link" : "c://path_to_file.lnk"
+                 , "id": 321
+            } 
+     
+         ];
+
+    currentProgramData = _result;
+    
+    
+    var serverRespone = {};
+
+  $.get("/program?id="+ program_id, function (data,status) {
+    
+    if (status !== "success") {
+        console.log("Error while updating patients data from server. status:" + status);
+    } else {
+        currentProgramData = data;
+
+    }
+  }).fail(function() {
+        
+     console.log("Error while getting therapy data from server.");
+
+  }); 
 
 
+  formatHtmlFromTherapy(step_index);
+    
 };
-
-
-
-
 
 
 //start up the page build

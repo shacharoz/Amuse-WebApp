@@ -4,104 +4,15 @@
 	margin-left: 0;
 }
 
+ 
+body {
+    background-color: #F9F9F9;
+}
+
 /* Base Settings */
 section#sidebar, section#program-main-1{
 	display: table-cell;
 }
-
-/* Topbar Section 
-section#topbar{
-	height: 75px;
-	padding: 0 25px;
-	background-color: white;
-	position: relative;
-}
-
-.topbar-thing{
-	display: inline-block;
-	line-height: 70px;
-}
-
-img#topbar-back{
-	height: 30px;
-}
-
-img#topbar-logo{
-	height: 20px;
-	margin-left: 25px;
-}
-
-p#topbar-header{
-	font-size: 20px;
-	font-weight: 500;
-	margin: 0 500px 0 70px;
-	color: #afafaf;
-}
-
-img#topbar-notifications{
-	margin: 0 50px;
-}
-
-p#topbar-patient-name{
-	font-size: 15px;
-	margin: 0;
-}
-
-img#topbar-patient-img{
-	height: 40px;
-	margin-left: 15px;
-	border-radius: 100%;
-	position: relative;
-}
-
-section#topbar:after{
-	background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 100%);
-	position: absolute;
-	content: '';
-	height: 2px;
-	right: 0;
-	left: 0;
-	bottom: 0;
-}
-
-/* Sidebar Section 
-section#sidebar{
-	width: 130px;
-	height: calc(100vh - 75px);
-	background-color: #3A557A;
-}
-
-a#sidebar-link:hover{
-	text-decoration: none;
-}
-
-div#sidebar-stop-div{
-	display: table;
-	margin: 30px auto;
-}
-
-img#sidebar-stop-img{
-	margin: 0 auto;
-}
-
-div#sidebar-div{
-	display: grid;
-	margin: 20px auto;
-}
-
-img#sidebar-link-img{
-	margin: 0 auto;
-}
-
-p#sidebar-link-text{
-	font-size: 15px;
-	margin-top: 5px;
-	padding: 0 30px;
-	line-height: 17px;
-	text-align: center;
-	color: white;
-}
-
 /* Program1 Section */
 section#program-main-1{
 	background-color: #F9F9F9;
@@ -140,7 +51,9 @@ p#program1-description{
 }
 
 img#program1-img{
-	width: 100%;
+	max-width: 300px;
+    max-height: 200px;
+    width: 100%;
 	border-radius: 0 0 5px 5px;
 }
 

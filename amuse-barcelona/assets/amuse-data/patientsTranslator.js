@@ -10,7 +10,7 @@ function formatHtmlFromPatientList(_patients) {
     var currentItemHtmlTemplate = StartingNewRow;
 
     
-
+    
     for (var i = 0; i < _patients.length; i++) {
         
         //check if we have more items
@@ -45,19 +45,8 @@ function formatHtmlFromPatientList(_patients) {
 
 var GetAllPatientsData = function() {
     
-    const serverRespone = {};
-
-    $.get("/patient", function (data,status) {
-        if (status !== "success") {
-            console.log("Error while updating patients data from server. status:" + status);
-        } else {
-            var _patients = data;
-
-            formatHtmlFromPatientList(_patients);
-        }
-    });
-    /*
-      var _patients = [
+    
+    var _patients = [
             { 
                 "fullname": "roni benizri"
                 , "image_path" : "http://placehold.it/100x100"
@@ -106,12 +95,26 @@ var GetAllPatientsData = function() {
             } 
             ];
         
-            formatHtmlFromPatientList(_patients);
+    
+    var serverRespone = {};
 
+    $.get("/patient", function (data,status) {
+        if (status !== "success") {
+            console.log("Error while updating patients data from server. status:" + status);
+        } else {
+            _patients = data;
+
+        }
+    }).fail(function() {
+        
+     console.log("Error while getting patients data from server.");
+
+    }); 
     
-    
-*/
+    formatHtmlFromPatientList(_patients);
+
 };
+
 
 GetAllPatientsData();
 
