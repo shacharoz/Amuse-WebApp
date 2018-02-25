@@ -227,26 +227,27 @@ var GetSpeicificStep = function(program_id, step_index) {
 
     //console.log("data: "+program_id + " "+ step_index);
 
-    // var _program =
-    //    [
-    //        {
-    //             "title": "program title 1"
-    //             , "description" : "program description program description program description"
-    //             , "main_image_path": "http://placehold.it/200x200"
-    //             , "sensor_system_image": "http://placehold.it/200x200"
-    //             , "activity" : "activity activity activity activity activity activity "
-    //             , "response" : "response response response response response response "
-    //             , "values" : {
-    //                 "physical_therapy" : "some text here"
-    //                 , "occupational_therapy" : ""
-    //                 , "speech_language_therapy" : "some text here"
-    //                 , "music_therapy" : ""
-    //             }
-    //             , "activate_link" : "c://path_to_file.lnk"
-    //             , "id": 1
-    //        }
-    //        ,
-    //        {
+     var _program =
+        [
+            {
+                 "title": "program title 1"
+                 , "description" : "program description program description program description"
+                 , "main_image_path": "http://placehold.it/200x200"
+                , "sensor_system_image": "http://placehold.it/200x200"
+                , "activity" : "activity activity activity activity activity activity "
+                 , "response" : "response response response response response response "
+                 , "values" : {
+                     "physical_therapy" : "some text here"
+                     , "occupational_therapy" : ""
+                     , "speech_language_therapy" : "some text here"
+                     , "music_therapy" : ""
+                 }
+                 , "activate_link" : "c://path_to_file.lnk"
+                 , "id": 1
+            } 
+        ];
+            
+    //       , {
     //             "title": "program title 2"
     //             , "description" : "program description program description program description"
     //             , "main_image_path": "http://placehold.it/200x200"

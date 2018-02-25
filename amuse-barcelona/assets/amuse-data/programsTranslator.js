@@ -53,17 +53,17 @@ function formatHtmlFromTherapyList(_programs) {
 
 var GetAllProgramsData = function() {
 
-
-
+    
 const serverRespone = {};
 
+    //therapy
 $.get("/program", function (data,status) {
     if (status !== "success") {
         console.log("Error while updating patients data from server. status:" + status);
     } else {
         var _programs = data;
 
-      formatHtmlFromTherapyList(_programs);
+        formatHtmlFromTherapyList(_programs);
     }
 });
 
@@ -102,18 +102,6 @@ $.get("/program", function (data,status) {
     //
     //
     //
-    // /*
-    // const serverRespone = {};
-    //
-    // $.get("/programs", function (data,status) {
-    //     if (status !== "success") {
-    //         console.log("Error while updating patients data from server. status:" + status);
-    //     } else {
-    //         var _programs = data;
-    //
-    //         formatHtmlFromTherapyList(_programs);
-    //     }
-    // });
     // */
 };
 
