@@ -304,7 +304,7 @@ var GetSpeicificStep = function(program_id, step_index) {
     
     var serverRespone = {};
 
-  $.get("/program?id="+ program_id, function (data,status) {
+  $.get("/therapy?programId="+ program_id, function (data,status) {
     
     if (status !== "success") {
         console.log("Error while updating patients data from server. status:" + status);
@@ -319,7 +319,7 @@ var GetSpeicificStep = function(program_id, step_index) {
   }); 
 
 
-  //formatHtmlFromTherapy(step_index);
+  formatHtmlFromTherapy(step_index);
     
 };
 
