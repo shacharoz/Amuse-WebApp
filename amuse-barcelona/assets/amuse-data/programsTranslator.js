@@ -54,7 +54,7 @@ function formatHtmlFromTherapyList(_programs) {
 var GetAllProgramsData = function() {
 
     var _result = [
-    
+   
              {
                  "title": "program title"
                  , "description" : "program description program description program description"
@@ -84,7 +84,7 @@ var GetAllProgramsData = function() {
              }
 
             ];
-     
+            
     var serverRespone = {};
 
     //therapy
@@ -95,7 +95,7 @@ var GetAllProgramsData = function() {
 
         } else {
              _result = data;
-
+            formatHtmlFromTherapyList(_result);
         }
     }).fail(function() {
         
