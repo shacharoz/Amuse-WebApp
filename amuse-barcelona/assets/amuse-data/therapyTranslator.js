@@ -319,7 +319,7 @@ var GetSpeicificStep = function(program_id, step_index) {
   }); 
 
 
-  formatHtmlFromTherapy(step_index);
+  //formatHtmlFromTherapy(step_index);
     
 };
 
