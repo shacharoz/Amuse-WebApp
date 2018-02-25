@@ -310,7 +310,7 @@ var GetSpeicificStep = function(program_id, step_index) {
         console.log("Error while updating patients data from server. status:" + status);
     } else {
         currentProgramData = data;
-
+        formatHtmlFromTherapy(step_index);
     }
   }).fail(function() {
         
