@@ -48,8 +48,8 @@ var GetAllPatientsData = function() {
     
     var _patients = [
             { 
-                "fullname": "roni benizri"
-                , "image_path" : "http://placehold.it/100x100"
+                "fullname": "Courtney Murray"
+                , "image_path" : "images/app/patients/40.jpg"
                 , "gender" : "male"
                 , "age" : "34"
                 , "address" : "..."
@@ -60,8 +60,8 @@ var GetAllPatientsData = function() {
                 }   
             } ,
             {
-                "fullname": "roni benizri"
-                , "image_path" : "http://placehold.it/100x100"
+                "fullname": "Nathan Turner"
+                , "image_path" : "images/app/patients/57.jpg"
                 , "gender" : "male"
                 , "age" : "34"
                 , "address" : "..."
@@ -70,9 +70,10 @@ var GetAllPatientsData = function() {
                 , "progress" : {
                 // a lot of data about previous programs and accomplishments
                 }   
-            } ,{
-                "fullname": "roni benizri"
-                , "image_path" : "http://placehold.it/100x100"
+            } ,
+        {
+                "fullname": "Emma Campbell"
+                , "image_path" : "images/app/patients/30.jpg"
                 , "gender" : "male"
                 , "age" : "34"
                 , "address" : "..."
@@ -81,9 +82,10 @@ var GetAllPatientsData = function() {
                 , "progress" : {
                 // a lot of data about previous programs and accomplishments
                 }   
-            } ,{
-                "fullname": "roni benizri"
-                , "image_path" : "http://placehold.it/100x100"
+            } ,
+        {
+                "fullname": "Benjamin Hall"
+                , "image_path" : "images/app/patients/9.jpg"
                 , "gender" : "male"
                 , "age" : "34"
                 , "address" : "..."
@@ -92,7 +94,91 @@ var GetAllPatientsData = function() {
                 , "progress" : {
                 // a lot of data about previous programs and accomplishments
                 }   
-            } 
+            } ,
+        {
+                "fullname": "Natalie Hunter"
+                , "image_path" : "images/app/patients/29.jpg"
+                , "gender" : "male"
+                , "age" : "34"
+                , "address" : "..."
+                , "country" : "england"
+                , "history" : "a long text of history"
+                , "progress" : {
+                // a lot of data about previous programs and accomplishments
+                }   
+            } ,
+        {
+                "fullname": "Jake Hopkins"
+                , "image_path" : "images/app/patients/14.jpg"
+                , "gender" : "male"
+                , "age" : "34"
+                , "address" : "..."
+                , "country" : "england"
+                , "history" : "a long text of history"
+                , "progress" : {
+                // a lot of data about previous programs and accomplishments
+                }   
+            } ,
+        {
+                "fullname": "Marie Rogers"
+                , "image_path" : "images/app/patients/46.jpg"
+                , "gender" : "male"
+                , "age" : "34"
+                , "address" : "..."
+                , "country" : "england"
+                , "history" : "a long text of history"
+                , "progress" : {
+                // a lot of data about previous programs and accomplishments
+                }   
+            } ,
+        {
+                "fullname": "Elijah Howard"
+                , "image_path" : "images/app/patients/18.jpg"
+                , "gender" : "male"
+                , "age" : "34"
+                , "address" : "..."
+                , "country" : "england"
+                , "history" : "a long text of history"
+                , "progress" : {
+                // a lot of data about previous programs and accomplishments
+                }   
+            } ,
+        {
+                "fullname": "Ashley Parker"
+                , "image_path" : "images/app/patients/83.jpg"
+                , "gender" : "male"
+                , "age" : "34"
+                , "address" : "..."
+                , "country" : "england"
+                , "history" : "a long text of history"
+                , "progress" : {
+                // a lot of data about previous programs and accomplishments
+                }   
+            } ,
+        {
+                "fullname": "Maria Baker"
+                , "image_path" : "images/app/patients/89.jpg"
+                , "gender" : "male"
+                , "age" : "34"
+                , "address" : "..."
+                , "country" : "england"
+                , "history" : "a long text of history"
+                , "progress" : {
+                // a lot of data about previous programs and accomplishments
+                }   
+            } ,
+        {
+                "fullname": "Joseph Carter"
+                , "image_path" : "images/app/patients/64.jpg"
+                , "gender" : "male"
+                , "age" : "34"
+                , "address" : "..."
+                , "country" : "england"
+                , "history" : "a long text of history"
+                , "progress" : {
+                // a lot of data about previous programs and accomplishments
+                }   
+            }
             ];
         
     
