@@ -34,7 +34,7 @@ function formatHtmlFromTherapyList(_programs) {
         currentItemHtmlTemplate += "<p id='program-header'>" + currentItemData.title + "</p>";
         currentItemHtmlTemplate += "<hr id='program-hr'>";
         currentItemHtmlTemplate += "<p id='program-description'>" + currentItemData.description + "</p>";
-        currentItemHtmlTemplate += "<img src='programs/clock-icon.png' id='program-clock'>";
+        currentItemHtmlTemplate += "<img src='_view/programs/clock-icon.png' id='program-clock'>";
         currentItemHtmlTemplate += "<p id='program-time'>1 hr</p>";
         currentItemHtmlTemplate += "<img src='" + currentItemData.main_image_path + "' id='program-img'>";
         currentItemHtmlTemplate += "</div></a>";
