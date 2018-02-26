@@ -190,8 +190,8 @@ function activate_program(){
      $.get("/therapy/activate?therapyId=" + currentStepData.id, function (data,status) {
         if (status !== "success") {
           console.log("Error while starting therapy." + currentStepData.id + " status:" + status);
-        } else {
-          currentProgramData = data;
+        } else {    
+          console.log("therapy app will start in both video and audio pc." + currentStepData.id + " status:" + status);
         }
      });
     
@@ -212,7 +212,7 @@ function deactivate_program(){
         if (status !== "success") {
           console.log("Error while stopping therapy." +  currentStepData.id + " status:" + status);
         } else {
-          currentProgramData = data;
+          console.log("therapy app will now stop in both video and audio pc." + currentStepData.id + " status:" + status);
         }
     });
 
