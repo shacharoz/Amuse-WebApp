@@ -186,14 +186,7 @@ function activate_program(){
     //replace button to stop
     TogglePlayStopButton(false);
     
-    //call server function here with program id and step id
-     $.get("/therapy/activate?therapyId=" + currentStepData.id, function (data,status) {
-        if (status !== "success") {
-          console.log("Error while starting therapy." + currentStepData.id + " status:" + status);
-        } else {    
-          console.log("therapy app will start in both video and audio pc." + currentStepData.id + " status:" + status);
-        }
-     });
+    //call_server_activateApp(currentStepData.id, true);
     
     //make sure all pages remember the app is playing  
     SaveApplicationState(_program_id, true);
@@ -207,20 +200,26 @@ function deactivate_program(){
     //replace button to play
     TogglePlayStopButton(true);
     
-    //call server function here
-    $.get("/therapy/deactivate?therapyId=" + currentStepData.id, function (data,status) {
-        if (status !== "success") {
-          console.log("Error while stopping therapy." +  currentStepData.id + " status:" + status);
-        } else {
-          console.log("therapy app will now stop in both video and audio pc." + currentStepData.id + " status:" + status);
-        }
-    });
+    //call_server_activateApp(currentStepData.id, false); 
 
     //make sure all pages remember the app is playing  
     SaveApplicationState(_program_id, false);
 }
 
 
+//call server function here with program id and step id    
+function call_server_activateApp(therapy_id, start){
+    
+var command = (start) ? "activate" : "deactivate";    
+     $.get("/therapy/" + command + "?therapyId=" + therapy_id, function (data,status) {
+        if (status !== "success") {
+          console.log("Error while starting therapy." + therapy_id + " status:" + status);
+        } else {    
+          console.log("therapy app will start in both video and audio pc." + therapy_id + " status:" + status);
+        }
+     });
+    
+}
 
 
 
