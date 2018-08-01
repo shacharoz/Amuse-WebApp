@@ -55,9 +55,12 @@ div#program1-body.title-container{
 div#program1-body .img-container{
   height: 70%;
   min-width: 100%;
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-position: center center;
+  background-size: contain;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
 }
 div#program1-body .desc-container{
   height: 70%;

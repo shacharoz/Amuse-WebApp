@@ -3,7 +3,8 @@ const _ = require('lodash');
 const axios = require('axios');
 const fs = require('fs');
 
-const configurationDir = process.argv[2] || "/Users/ohad/Google Drive/Asulin Application/newconfig";
+
+const configurationDir = process.argv[2] || "./dataToFeed";
 
 fs.readdir(configurationDir + "/therapists", (err, files) => {
   const therapists = _.omit(files, [0, 1]);
