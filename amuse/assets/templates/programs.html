@@ -1,0 +1,33 @@
+<section id="programs">
+
+  <div id="programs_data_holder" ng-controller="programsController">
+    <div id='programs-row' class='row justify-content-center'>
+      <div id='three-p' class='col-11'>
+        <div id='three-p-row' class='row'>
+
+
+
+          <a href='#!/program/{{ program.id }}?patientId={{patientId}}&therapistId={{therapistId}}' id='program-link' class='col-4' ng-repeat="program in programs">
+            <div id='program-body'>
+              <div class='program-header'>
+                {{ program.title }}
+              </div>
+              <div class='program-description'>
+                {{ program.description }}
+              </div>
+              <div class="time-container">
+                <img src='_view/programs/clock-icon.png'>
+                <p id='program-time'>1 hr</p>
+              </div>
+              <div class="image-container" ng-style="{'background-image':'url('+ program.main_image_path + ')'}">
+              </div>
+
+            </div></a>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

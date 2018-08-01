@@ -1,0 +1,141 @@
+<section id="program-main-1" ng-controller="programController">
+
+
+  <div id='program1-row' class='row justify-content-center top'>
+    <div id='three-divs' class='col-11'>
+      <div id='three-divs-row' class='row justify-content-around'>
+        <div id='program1-body' class='col-3'>
+          <div class="title-container">
+            <p id='program1-header'>Application</p>
+          </div>
+          <hr id='program1-hr'>
+          <div class="img-container" ng-style="{'background-image':'url('+ currentStepData.main_image_path + ')'}">
+            <!--<img src='{{ currentStepData.main_image_path }}' id='program1-img'>-->
+          </div>
+        </div>
+
+        <div id='program1-body' class='col-3'>
+          <div class="title-container">
+              <p id='program1-header'>{{ currentStepData.title }}</p>
+          </div>
+          <hr id='program1-hr'>
+          <div class="desc-container">
+            <p id='program1-description'>{{ currentStepData.description }}</p></div>
+        </div>
+        <div id='program1-body' class='col-3'>
+          <div class="title-container">
+            <p id='program1-header'>Sensor</p>
+          </div>
+          <hr id='program1-hr'>
+          <div class="img-container" ng-style="{'background-image':'url('+ currentStepData.sensor_system_image + ')'}">
+          </div>
+          <!--<img src='{{ currentStepData.sensor_system_image }}' id='program1-img'></div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="program1-row" class="row justify-content-center middle"  >
+    <div id="three-divs" class="col-11">
+      <div id="three-divs-row" class="row justify-content-around">
+        <div id='program1-body' class='col-7'>
+          <div id="activity-response-holder">
+            <p id='program1-description'><b>Activity:</b><br> {{currentStepData.activity }}</p>
+            <p id='program1-description'><b>Content response:</b><br>{{currentStepData.response }}</p>
+          </div>
+        </div>
+
+        <div id="program1-body" class="col-3">
+          <div id="theraputic-values-content-holder">
+            <div ng-show="currentThrapeuticValue === null">
+              <p id='program1-header'>Theraputic Values</p>
+              <hr id='program1-hr'>
+              <a ng-show="currentStepData.values.physical_therapy" ng-click="setValues('physical')" href="" ng-click="showPhysicalTerapyValues()" id='program1-links'>
+                <div id='program1-div-links'><p id='program1-p-links'>Physical Therapy</p></div>
+              </a>
+              <a ng-show="currentStepData.values.music_therapy" ng-click="setValues('musical')" href='' id='program1-links'>
+                <div id='program1-div-links'><p id='program1-p-links'>Musical Therapy</p></div>
+              </a>
+              <a ng-show="currentStepData.values.occupational_therapy" ng-click="setValues('occupational')" href='' id='program1-links'>
+                <div id='program1-div-links'><p id='program1-p-links'>Occupational Therapy</p></div>
+              </a>
+              <a ng-show="currentStepData.values.speach_language_therapy" ng-click="setValues('speech')" href='' id='program1-links'>
+                <div id='program1-div-links'><p id='program1-p-links'>Speech-Language Therapy</p></div>
+              </a>
+            </div>
+            <div ng-show="currentThrapeuticValue==='physical'">
+              <p id='program1-header'>
+                <a ng-click="setValues(null)" href=''>
+                  <img src='_view/topbar/topbar_back.png' style='height:15px' id='topbar-back'/>
+                </a>
+                Physical Therapy
+              </p>
+              <hr id='program1-hr'>
+              <p id='program1-description'>{{currentStepData.values.physical_therapy }}</p>
+            </div>
+
+            <div ng-show="currentThrapeuticValue==='musical'">
+              <p id='program1-header'>
+                <a ng-click="setValues(null)" href=''>
+                  <img src='_view/topbar/topbar_back.png' style='height:15px' id='topbar-back'/>
+                </a>
+                Musical Therapy
+              </p>
+              <hr id='program1-hr'>
+              <p id='program1-description'>{{currentStepData.values.music_therapy }}</p>
+            </div>
+
+            <div ng-show="currentThrapeuticValue==='occupational'">
+              <p id='program1-header'>
+                <a ng-click="setValues(null)" href=''>
+                  <img src='_view/topbar/topbar_back.png' style='height:15px' id='topbar-back'/>
+                </a>
+                Occupational Therapy
+              </p>
+              <hr id='program1-hr'>
+              <p id='program1-description'>{{ currentStepData.values.occupational_therapy }}</p>
+            </div>
+
+            <div ng-show="currentThrapeuticValue==='speech'">
+              <p id='program1-header'>
+                <a ng-click="setValues(null)" href=''>
+                  <img src='_view/topbar/topbar_back.png' style='height:15px' id='topbar-back'/>
+                </a>
+                Speech-Language Therapy
+              </p>
+              <hr id='program1-hr'>
+              <p id='program1-description'>{{ currentStepData.values.speach_language_therapy }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="program1-row" class="row bottom">
+    <div id="three-divs" class="col-11">
+      <div id="three-divs-row" class="row">
+        <div class="col-1">
+        </div>
+        <div id="program1-body" class="col-1">
+          <a href="" id="sidebar-link">
+            <img src="_view/Desi/assets/back_page_unable.png" ng-click="previousStep()"/>
+          </a>
+        </div>
+        <div class="col-9">
+          <a ng-show="!isPlaying" href='' id='sidebar-link'>    <div id='sidebar-stop-div'>            <img src='_view/Desi/assets/play_program.png' id='sidebar-play-img' ng-click="play()"  />            </div>  </a>
+          <a ng-show="isPlaying" href='' id='sidebar-link'>    <div id='sidebar-stop-div'>            <img src='_view/Desi/assets/stop_program.png' id='sidebar-play-img' ng-click="stop()"  />            </div>  </a>
+        </div>
+        <div id="program1-body" class="col-1">
+          <a href="" id="sidebar-link">
+            <img src="_view/Desi/assets/next_page.png" ng-click="nextStep()"/>
+          </a>
+        </div>
+        <!--<a href='javascript:deactivate_program();' id='sidebar-link'>    <div id='sidebar-stop-div'>    <img src='_view/Desi/assets/stop_program.png' id='sidebar-stop-img' />   </div>    </a>-->
+
+      </div>
+    </div>
+  </div>
+</section>

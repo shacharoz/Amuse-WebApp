@@ -1,0 +1,14 @@
+<section id="patients">
+  <div id='patients-row' class='row justify-content-center' ng-controller="patientsController">
+    <div id='three-p' class='col-11'>
+      <div id='three-p-row' class='row'>
+        <a href='#!/programs?patientId={{ patient.id }}&therapistId={{therapistId}}' id='therapist-link' class='col-4' ng-repeat="patient in patients">
+          <div id='therapist-body' class='row'>
+            <img src='{{ patient.image_path }}' id='therapist-picture' class='col-6'>
+            <p id='therapist-name' class='col-6'> {{ patient.fullname }} </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
