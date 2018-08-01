@@ -1,0 +1,123 @@
+<section id="program-main-1" ng-controller="controllersController">
+  <div id="program-sound-row" class="row justify-content-center">
+    <div id="two-divs" class="col-11">
+      <div id="two-divs-row" class="row justify-content-between">
+        <div id="program-sound-body" class="col-3">
+          <p id="program-sound-header">Main Control</p>
+          <hr id="program-sound-hr">
+          <div id="program-sound-inner">
+            <a href="" ng-click="play()">
+              <img src="_view/Desi/assets/sound_play_on.png" id="program-sound-button" />
+            </a>
+            <!--<a href="#">-->
+              <!--<img src="_view/Desi/assets/sound_pause_off.png" id="program-sound-button"/>-->
+            <!--</a>-->
+            <a href="" ng-click="stop()">
+              <img src="_view/Desi/assets/sound_stop_off.png" id="program-sound-button"/>
+            </a>
+          </div>
+        </div>
+        <div id="program-sound-body" class="col-8">
+          <p id="program-sound-header">Main Volume</p>
+          <hr id="program-sound-hr">
+          <div id="program-sound-inner">
+
+            <!--<slider slideStop="executeMe()" ng-model="sliders.sliderValue" min="{{testOptions.min}}" step="{{testOptions.step}}" max="{{testOptions.max}}"></slider>-->
+
+            <slider slider-id="testOptions.sliderId"
+                    ng-model="summary.master.volume"
+                    value="summary.master.volume"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    <!--range="testOptions.range"-->
+                    <!--precision="{{ testOptions.precision }}"-->
+                    <!--reversed="{{ testOptions.reversed }}"-->
+                    <!--orientation="{{ testOptions.orientation }}"-->
+                    <!--handle="{{ testOptions.handle }}"-->
+                    <!--enabled="{{ testOptions.enabled }}"-->
+                    <!--ng-disabled="testOptions.ngDisabled"-->
+                    <!--naturalarrowkeys="{{ testOptions.naturalarrowkeys }}"-->
+            >
+              If you can see this then slider did not get compiled by Angular.
+              Check that all necessary files are included, did you run "bower install"?
+            </slider>
+            <p>{{summary.master.volume}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="program-sound-row" class="row justify-content-center">
+    <div id="one-div" class="col-11">
+      <div id="one-div-row" class="row justify-content-between">
+        <div id="program-sound-body" class="col-12">
+          <p id="program-sound-header">Vol Control</p>
+          <hr id="program-sound-hr">
+          <table>
+            <tr>
+              <td ng-repeat="track in summary.tracks" class="trackVolume">
+                <slider slider-id="testOptions.sliderId"
+                        ng-model="track.volume"
+                        value="track.volume"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        orientation="vertical"
+                        reversed="true"
+                <!--range="testOptions.range"-->
+                <!--precision="{{ testOptions.precision }}"-->
+                <!--handle="{{ testOptions.handle }}"-->
+                <!--enabled="{{ testOptions.enabled }}"-->
+                <!--ng-disabled="testOptions.ngDisabled"-->
+                <!--naturalarrowkeys="{{ testOptions.naturalarrowkeys }}"-->
+                >
+                If you can see this then slider did not get compiled by Angular.
+                Check that all necessary files are included, did you run "bower install"?
+                </slider>
+              </td>
+            </tr>
+            <tr>
+              <td ng-repeat="track in summary.tracks">{{track.name}}</td>
+            </tr>
+            <tr>
+              <td ng-repeat="track in summary.tracks">{{track.volume | number : 1}}</td>
+            </tr>
+          </table>
+          <!--<img class="d-flex mr-3" src="_view/Desi/assets/vol_control.png" ng-style="{'visibility': 'hidden'}" alt="">-->
+          <!--
+           <div id="program-sound-row" class="row justify-content-center">
+              <div id="one-div" class="col-11">
+                <div id="three-div-row" class="row justify-content-between">
+                  <div id="program-sound-body" class="col-4">
+                  <div id="program-sound-inner">
+
+                      <input id="bootstrap_volume_slider1" data-slider-id='volume_slider-vert1' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="7"   data-slider-orientation="vertical" />
+
+                      </div>
+
+                    </div>
+
+                    <div id="program-sound-body" class="col-4">
+                  <div id="program-sound-inner">
+
+                      <input id="bootstrap_volume_slider2" data-slider-id='volume_slider-vert2' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="7"   data-slider-orientation="vertical" />
+
+                      </div>
+                      </div>
+
+                     <div id="program-sound-body" class="col-4">
+                  <div id="program-sound-inner">
+
+                      <input id="bootstrap_volume_slider3" data-slider-id='volume_slider-vert3' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="7"   data-slider-orientation="vertical" />
+
+                      </div>
+                      </div>
+               -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

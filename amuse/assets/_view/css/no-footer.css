@@ -1,0 +1,8 @@
+body.sticky-footer .no-footer {
+    
+    width: : important! calc(100vh - 56px);
+}
+
+body.content-wrapper.no-footer {
+    width: calc(100vh - 56px);
+}

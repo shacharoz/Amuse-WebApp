@@ -1,0 +1,62 @@
+/* Topbar Section */
+section#topbar{
+	height: 75px;
+	padding: 0 25px;
+	background-color: white;
+	position: relative;
+}
+
+.topbar-thing{
+	display: inline-block;
+	line-height: 70px;
+}
+
+img#topbar-back{
+	height: 30px;
+}
+
+img#topbar-logo{
+	height: 20px;
+	margin-left: 25px;
+}
+
+p#topbar-header{
+	font-size: 20px;
+	font-weight: 500;
+	margin: 0 0 0 70px;
+	color: #afafaf;
+}
+
+img#topbar-search, img#topbar-notifications, p#topbar-patient-name, img#topbar-patient-img{
+	float: right;
+}
+
+img#topbar-search{
+	margin: 26px 0;
+}
+
+img#topbar-notifications{
+	margin: 26px 50px;
+}
+
+p#topbar-patient-name{
+	font-size: 15px;
+	margin: 0;
+}
+
+img#topbar-patient-img{
+	height: 40px;
+	margin: 15px 15px;
+	border-radius: 100%;
+	position: relative;
+}
+
+section#topbar:after{
+	background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 100%);
+	position: absolute;
+	content: '';
+	height: 2px;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}

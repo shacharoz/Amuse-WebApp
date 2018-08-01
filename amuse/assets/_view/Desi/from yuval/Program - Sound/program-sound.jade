@@ -1,0 +1,62 @@
+doctype html
+html
+	head
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+		link(rel="stylesheet", href="program-sound-style-dist.css" type="text/css")
+		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js")
+		script(src="https://code.jquery.com/ui/1.8.14/jquery-ui.min.js")
+		script.
+			$('document').ready(function(){
+				var volpos = $('img#program-sound-power-button').position();
+				var volpos_left = volpos.left - 35;
+				$('img#program-sound-power-button').css('right', volpos_left + "px");
+				$('img#program-sound-power-button').draggable({axis: "x", containment: [volpos.left, volpos.top, volpos.left + 445, volpos.top]});
+
+				var controlerpos = $('div#program-sound-controler').position();
+				var controlerpos_left = controlerpos.left - 78;
+				$('img#program-sound-controler-button').css('left', controlerpos_left + "px");
+				$('img#program-sound-controler-button').draggable({axis: "y", containment: [controlerpos_left, controlerpos.top + 255, controlerpos_left, controlerpos.top + 450]});
+			});
+	body
+		section#program-sound
+			div#program-sound-row.row.justify-content-center
+				div#two-divs.col-11
+					div#two-divs-row.row.justify-content-between
+						div#program-sound-body.col-3
+							p#program-sound-header Main Control
+							hr#program-sound-hr
+							div#program-sound-inner
+								img(src="img/not-real-button.png")#program-sound-button
+								img(src="img/not-real-button.png")#program-sound-button
+								img(src="img/not-real-button.png")#program-sound-button
+						div#program-sound-body.col-8
+							p#program-sound-header Main Volume
+							hr#program-sound-hr
+							div#program-sound-inner
+								img(src="img/vol_control_main.png")#program-sound-power-range
+								img(src="img/vol_button.png")#program-sound-power-button
+			div#program-sound-row.row.justify-content-center
+				div#one-div.col-11
+					div#one-div-row.row.justify-content-between
+						div#program-sound-body.col-12
+							p#program-sound-header Vol Control
+							hr#program-sound-hr
+							div#program-sound-inner.row.justify-content-center
+								div#program-sound-controler.col-2
+									img(src="img/not-real-blue-line.png")#program-sound-controler-range
+									img(src="img/vol_button.png")#program-sound-controler-button
+								div#program-sound-controler.col-2
+									img(src="img/not-real-blue-line.png")#program-sound-controler-range
+									img(src="img/vol_button.png")#program-sound-controler-button
+								div#program-sound-controler.col-2
+									img(src="img/not-real-blue-line.png")#program-sound-controler-range
+									img(src="img/vol_button.png")#program-sound-controler-button
+								div#program-sound-controler.col-2
+									img(src="img/not-real-blue-line.png")#program-sound-controler-range
+									img(src="img/vol_button.png")#program-sound-controler-button
+								div#program-sound-controler.col-2
+									img(src="img/not-real-blue-line.png")#program-sound-controler-range
+									img(src="img/vol_button.png")#program-sound-controler-button
+								div#program-sound-controler.col-2
+									img(src="img/not-real-blue-line.png")#program-sound-controler-range
+									img(src="img/vol_button.png")#program-sound-controler-button

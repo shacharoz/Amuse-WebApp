@@ -1,0 +1,15 @@
+<section id="therapists">
+  <div id="therapists-greeting"> Log In as: </div>
+  <div id='therapists-row' class='row justify-content-center' ng-controller="therapistsController">
+    <div id='three-p' class='col-11'>
+      <div id='three-p-row' class='row'>
+        <a href='#!/patients?therapistId={{ therapist.id }}' id='therapist-link' class='col-4' ng-repeat="therapist in therapists">
+          <div id='therapist-body' class='row'>
+            <img src='{{ therapist.image_path }}' id='therapist-picture' class='col-6'>
+            <p id='therapist-name' class='col-6'> {{ therapist.fullname }} </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

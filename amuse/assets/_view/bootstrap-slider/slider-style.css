@@ -1,0 +1,29 @@
+/* Or display content like unicode characters or fontawesome icons */
+
+
+.slider-handle.custom {
+    background: transparent none;
+    background-image: url("Desi/assets/sound_stop_off.png");
+
+}
+
+.slider-handle.custom::before {
+	line-height: 30px;
+    margin-left: -10px;
+	font-size: 50px;
+    background-image: url("Desi/assets/sound_stop_off.png");
+
+    /*content: '\2605'; 
+	color: #726204;*/  
+}
+
+#volume_slider .slider-selection  {
+	background: linear-gradient(90deg, #2D4360 0%, #395579 100%);
+    /*    
+	background: linear-gradient(90deg, #FAD961 0%, #F77120 43.79%);*/
+}
+
+.slider-handle {
+    background: #FFBA48;
+    border: 5px #ACACAC solid;
+}

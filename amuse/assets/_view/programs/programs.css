@@ -1,0 +1,100 @@
+/* Change Bootstrap css */
+.row{
+	margin-right: 0;
+	margin-left: 0;
+}
+
+/* Programs Section */
+section#programs{
+	background-color: #F9F9F9;
+	padding: 5px 0;
+    
+}
+
+div#programs-row{
+	margin: 50px 0;
+}
+a#program-link{
+  transition: .3s all ease-in-out;
+  box-shadow: 2px 1px 12px 0px #0000008c;
+  margin: 5px;
+  cursor: pointer;
+  max-width: 32%;
+}
+
+a#program-link:hover{
+	text-decoration: none;
+  box-shadow: none;
+}
+
+div#program-body{
+	background-color: white;
+	border: 1px solid #F2F2F2;
+	border-radius: 5px;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+div#program-body div.program-header{
+  height: 15%;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 1px solid gray;
+}
+div#program-body div.program-description{
+  height: 25%;
+  padding: 5px;
+}
+div#program-body div.time-container{
+  height: 15%;
+  //display: flex;
+  padding: 5px;
+ }
+div#program-body div.image-container{
+  height: 45%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding: 5px;
+
+}
+
+
+p#program-header{
+	font-size: 18px;
+	font-weight: 700;
+	color: #333;
+	margin: 8px 0 5px 15px;
+}
+
+hr#program-hr{
+	margin: 0;
+	background-color: #f2f2f2;
+}
+
+p#program-description{
+	font-size: 13px;
+	font-weight: normal;
+	margin: 35px 45px 25px 30px;
+	color: #828282;
+}
+
+img#program-clock{
+	display: inline-block;
+	margin-left: 30px;
+	margin-right: 10px;
+}
+
+p#program-time{
+	display: inline-block;
+	font-size: 17px;
+	color: #828282;
+}
+
+img#program-img{
+	width: 100%;
+	border-radius: 0 0 5px 5px;
+}

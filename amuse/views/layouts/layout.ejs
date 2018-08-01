@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.0/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.0/angular-route.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="_view/vendor/bootstrap/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="_view/vendor/bootstrap/css/bootstrap-grid.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.2/css/bootstrap-slider.min.css" type="text/css">
+  <link rel="stylesheet" href="_view/Home/home-style.css" type="text/css">
+  <link rel="stylesheet" href="_view/topbar/topbar-styles.css" type="text/css">
+  <link href="_view/css/patients-styles.css" rel="stylesheet">
+  <link href="_view/therapists/therapists.css" rel="stylesheet">
+  <link href="_view/patients/patients.css" rel="stylesheet">
+  <link href="_view/programs/programs.css" rel="stylesheet">
+  <link href="_view/program/program.css" rel="stylesheet">
+  <link href="_view/sidebar/sidebar-styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="_view/sound/program-sound-style.css" type="text/css">
+</head>
+
+<body  ng-app="amuseApp">
+<section id="topbar">
+  <a href="#!/"><img src="_view/Desi/assets/topbar_logo.png" id="topbar-logo" class="topbar-thing"></a>
+  <!--<p id="topbar-header" class="topbar-thing" style="color: white">amuse</p>-->
+
+  <a href="#!/controls"><img src="_view/Desi/assets/home_controlers.png" id="topbar-controls"> Controls</a>
+  <!--<img src="_view/topbar/not-real-profile-picture.jpg" id="topbar-patient-img" class="topbar-thing">-->
+  <!--<p id="topbar-patient-name" class="topbar-thing">Yuval Goldschmidt</p>-->
+  <!--<a href="#">-->
+    <!--<img src="_view/topbar/topbar_bell.png" id="topbar-notifications" class="topbar-thing">-->
+  <!--</a>-->
+  <!--<a href="#">-->
+    <!--<img src="_view/topbar/topbar_search.png" id="topbar-search" class="topbar-thing">-->
+  <!--</a>-->
+</section>
+
+<%- body %>
+
+<!--SCRIPTS-->
+<script src="/dependencies/sails.io.js"></script>
+<script src="/dependencies/angular/app.js"></script>
+<script src="/dependencies/angular/controllers/controllersController.js"></script>
+<script src="/dependencies/angular/controllers/homepageController.js"></script>
+<script src="/dependencies/angular/controllers/patientsController.js"></script>
+<script src="/dependencies/angular/controllers/programController.js"></script>
+<script src="/dependencies/angular/controllers/programsController.js"></script>
+<script src="/dependencies/angular/controllers/therapistsController.js"></script>
+<!--SCRIPTS END-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.2/bootstrap-slider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-bootstrap-slider/0.1.28/slider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+
+</body>
+</html>
