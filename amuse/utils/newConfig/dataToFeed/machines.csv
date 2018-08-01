@@ -1,0 +1,9 @@
+Station Number,Station Name,Station IP,Station Port
+0,Therapist Station,192.168.0.110,32001
+1,Station 1,192.168.10.101,32001
+2,Station 2,192.168.10.102,32001
+3,Station 3,192.168.10.103,32001
+4,Station 4,192.168.10.104,32001
+5,Station 5,192.168.10.105,32001
+6,Station 6,192.168.10.106,32001
+7,Server,192.168.10.107,32001
