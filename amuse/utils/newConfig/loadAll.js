@@ -40,7 +40,7 @@ function loadMachines() {
 
 function removeHidden(list) {
   return _.reduce(list, (newList, item) => {
-    if (item !== '.DS_Store') {
+    if (item !== '.DS_Store' && item !== 'Icon?') {
       newList.push(item)
     };
     return newList;

@@ -55,9 +55,11 @@ div#program-body div.time-container{
  }
 div#program-body div.image-container{
   height: 45%;
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-position: center center;
+  background-size: contain;
+  width: 100%;
+  overflow: hidden;
   padding: 5px;
 
 }

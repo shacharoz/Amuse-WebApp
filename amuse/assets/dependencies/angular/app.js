@@ -3,7 +3,7 @@ var app = angular.module('amuseApp', ['ngRoute','ui.bootstrap-slider']);
 app.config(function($routeProvider,) {
   $routeProvider
     .when('/', {
-      templateUrl : 'templates/homepage.html'
+      templateUrl : 'templates/therapists.html'
     })
     .when('/therapists', {
       templateUrl : 'templates/therapists.html'
